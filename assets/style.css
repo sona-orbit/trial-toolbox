@@ -252,3 +252,13 @@ details.faq { border-bottom: 1px solid var(--line); padding: 4px 0; }
 .post-card h2 { font-size: 1.15rem; margin: 2px 0 6px; }
 .post-card p { color: var(--ink-2); margin: 0; font-size: .95rem; }
 @media (max-width: 37.5em) { .post-card { grid-template-columns: 1fr; } }
+.home-posts { padding: 56px 0 8px; }
+.home-posts h2 { text-align: center; }
+.post-card h3 { font-size: 1.1rem; margin: 2px 0 6px; line-height: 1.45; }
+/* 頁首四個選項（首頁、文章、使用說明、隱私權）在窄手機上排得下：品牌不換行，選單縮一點 */
+.brand span { white-space: nowrap; }
+@media (max-width: 26em) {
+  .brand { gap: 6px; font-size: 1rem; }
+  .brand img { width: 28px; height: 28px; }
+  .nav a { padding: 6px 5px; font-size: .86rem; }
+}
