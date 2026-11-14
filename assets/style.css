@@ -271,3 +271,14 @@ details.faq { border-bottom: 1px solid var(--line); padding: 4px 0; }
 .device-links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 0; font-weight: 600; }
 .device-links a::after { content: " ›"; }
 @media (max-width: 26em) { .site-header .nav-privacy, .site-header .nav-home { display: none; } }
+/* 教學（guide/） */
+.guide-list { list-style: none; padding: 0; margin: 10px 0 28px; display: grid; gap: 10px; }
+.guide-list a { display: grid; gap: 4px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; color: var(--ink); text-decoration: none; }
+.guide-list a:hover { border-color: var(--seal); }
+.guide-list b { font-size: 1.05rem; }
+.guide-list span { color: var(--ink-2); font-size: .95rem; }
+.guide-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 36px 0 0; }
+.guide-pager a { display: grid; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); text-decoration: none; }
+.guide-pager a span { color: var(--ink-2); font-size: .85rem; }
+.guide-pager .next { text-align: right; }
+@media (max-width: 26em) { .site-header .nav-guide { display: none; } .guide-pager { grid-template-columns: 1fr; } .guide-pager .next { text-align: left; } }
