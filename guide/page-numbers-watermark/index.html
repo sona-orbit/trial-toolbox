@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||"").trim().slice(0,60)});}},true);</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>替 PDF 每一頁加頁碼、流水號或浮水印：頁碼與浮水印教學｜審判工具箱</title>
+<meta name="description" content="用審判工具箱的「頁碼與浮水印」，在 PDF 的每一頁加上「第 N 頁」或「ABC000001」這類流水號，也可以加上「僅供閱卷使用」這類浮水印。這篇說明各個選項、預覽，以及加上去之後要注意的地方。">
+<meta name="text-scale" content="scale">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="審判工具箱">
+<meta property="og:title" content="替 PDF 每一頁加頁碼、流水號或浮水印：頁碼與浮水印教學｜審判工具箱">
+<meta property="og:description" content="用審判工具箱的「頁碼與浮水印」，在 PDF 的每一頁加上「第 N 頁」或「ABC000001」這類流水號，也可以加上「僅供閱卷使用」這類浮水印。這篇說明各個選項、預覽，以及加上去之後要注意的地方。">
+<meta property="og:url" content="https://sona-orbit.github.io/trial-toolbox/guide/page-numbers-watermark/">
+<meta property="og:image" content="https://sona-orbit.github.io/trial-toolbox/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sona-orbit.github.io/trial-toolbox/guide/page-numbers-watermark/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icon-32.png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&amp;display=swap&amp;text=%20DFPadehino%E3%80%81%E3%83%BB%E4%B8%80%E4%B8%89%E4%B8%8A%E4%B8%8D%E4%B9%8B%E4%BA%86%E4%BA%8B%E4%BA%8C%E4%BB%80%E4%BB%A5%E4%BB%BD%E5%80%8B%E5%81%9A%E5%85%A5%E5%85%B7%E5%87%BA%E5%88%A4%E5%88%B0%E5%8A%A0%E5%8D%B0%E5%8E%9F%E5%8F%AF%E5%95%8F%E5%97%8E%E5%9C%A8%E5%A5%BD%E5%AD%97%E5%AD%B8%E5%AF%A9%E5%B0%81%E5%B0%8B%E5%B7%A5%E5%B8%B8%E5%B9%BE%E6%84%8F%E6%88%96%E6%8E%A5%E6%90%9C%E6%94%BE%E6%95%99%E6%96%87%E6%9B%BF%E6%9C%83%E6%9C%AC%E6%AD%A5%E6%AF%8F%E6%B0%B4%E6%B3%A8%E6%B5%81%E6%B5%AE%E7%90%86%E7%9A%84%E7%A2%BC%E7%AC%AC%E7%AE%B1%E7%BA%8C%E8%83%BD%E8%88%87%E8%99%95%E8%99%9F%E8%A6%81%E8%A6%8B%E8%B5%B7%E8%BC%B8%E9%80%99%E9%82%84%E9%9D%A2%E9%A0%81%E9%A1%8C%E9%BA%BC%EF%BC%8C%EF%BC%8F%EF%BC%9A%EF%BC%9F">
+<link rel="stylesheet" href="../../assets/style.css?v=72cf8515">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/trial-toolbox/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "替 PDF 每一頁加頁碼、流水號或浮水印：頁碼與浮水印教學", "description": "用審判工具箱的「頁碼與浮水印」，在 PDF 的每一頁加上「第 N 頁」或「ABC000001」這類流水號，也可以加上「僅供閱卷使用」這類浮水印。這篇說明各個選項、預覽，以及加上去之後要注意的地方。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://sona-orbit.github.io/trial-toolbox/guide/page-numbers-watermark/", "author": {"@type": "Person", "name": "Sona Orbit"}, "publisher": {"@type": "Organization", "name": "Sona Orbit"}, "about": {"@type": "SoftwareApplication", "name": "審判工具箱", "url": "https://sona-orbit.github.io/trial-toolbox/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "加了頁碼，原本的文字還能搜尋嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。頁碼與浮水印是疊在原頁上的一層，原本的頁面內容不會被重畫，文字一樣可以搜尋、複製。"}}, {"@type": "Question", "name": "好幾份一起處理，流水號會接續嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。每一份都從「從第幾號」開始編。要連續編號，先用「頁面整理」合併成一份，或每份分開輸出並各自填起始號碼。"}}, {"@type": "Question", "name": "封面可以不印頁碼嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。勾「第一頁不印（封面），從第二頁開始數」，第一頁不印，第二頁印第一個號碼。"}}]}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="../../"><img src="../../assets/icon-192.webp" alt="" width="32" height="32"><span>審判工具箱</span></a>
+<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../guide/" class="nav-guide" aria-current="page">教學</a><a href="../../blog/" class="nav-blog">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
+</div></header>
+<main><article class="post"><div class="wrap narrow">
+<p class="eyebrow"><a href="../../guide/">教學</a></p>
+<h1>替 PDF 每一頁加頁碼、流水號或浮水印：頁碼與浮水印教學</h1>
+<p class="post-meta"><time datetime="2026-11-14">2026.11.14</time>・約 5 分鐘</p>
+<p class="lead">卷證影本、書狀附件常常需要編頁碼，或標上「僅供閱卷使用」。「頁碼與浮水印」一次處理好幾份 PDF，改設定時右邊直接顯示蓋好的樣子，原本的頁面內容不會被重畫。</p>
+
+
+<nav class="post-toc" aria-label="目錄"><b>目錄</b><ol><li><a href="#what">這個工具做什麼</a></li><li><a href="#step1">第一步：放入 PDF</a></li><li><a href="#numbers">第二步之一：頁碼</a></li><li><a href="#bates">流水號</a></li><li><a href="#watermark">第二步之二：浮水印</a></li><li><a href="#step3">第三步：輸出</a></li><li><a href="#iphone">在 iPhone・iPad 上</a></li><li><a href="#limits">做不到的事／要注意</a></li></ol></nav>
+<div class="post-body">
+<h2 id="what">這個工具做什麼</h2>
+<p>「頁碼與浮水印」在首頁的「遞狀與交付」那一組（沒有數字捷徑，Mac 從側邊欄或選單列點）。流程是：放入 PDF › 設定與預覽 › 輸出。</p>
+<ul>
+<li>頁碼與浮水印各有一個開關，可以只用一個，也可以同時用。</li>
+<li>頁碼和浮水印是疊在原頁上面的一層。原本的頁面內容不會被重畫，原本的文字一樣可以搜尋、複製。</li>
+<li>可以一次放好幾份，每份各自輸出一個 PDF。原本的 PDF 不會被改動。</li>
+</ul>
+<p>示範用合成的「偵卷.pdf」（5 頁）與「院卷.pdf」（3 頁）。</p>
+
+<h2 id="step1">第一步：放入 PDF</h2>
+<p>點「頁碼與浮水印」，把 PDF 拖進來，或按「選擇檔案…」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:900px"><img src="../../assets/guide/page-numbers-watermark/intake.webp" alt="頁碼與浮水印放入兩份：偵卷.pdf 5 頁、院卷.pdf 3 頁，會得到每份一個加好頁碼或浮水印的 PDF" width="900" height="320" loading="lazy" decoding="async"></div><figcaption>▲ 放入兩份，每份會各自輸出一個 PDF。</figcaption></figure>
+<p>有開啟密碼的檔案，放進來時會問密碼。按右上角的「下一步：設定與預覽」。</p>
+
+<h2 id="numbers">第二步之一：頁碼</h2>
+<p>左邊是設定，右邊「蓋好的樣子」是 App 實際蓋一份後顯示出來的，跟輸出的結果相同。改左邊任何一項，右邊馬上換成新的樣子。</p>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">頁碼的設定</p><img src="../../assets/guide/page-numbers-watermark/numbers.webp" alt="預設的頁碼設定：位置下中、格式第 N 頁、從第 1 號、字級 10 pt，例：第一頁印「第 1 頁」；加浮水印沒有勾" width="340" height="435" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">蓋好的樣子</p><img src="../../assets/guide/page-numbers-watermark/numbers-preview.webp" alt="蓋好的樣子：偵卷.pdf 第 1／5 頁，下方中間印著「第 1 頁」" width="640" height="725" loading="lazy" decoding="async"></div></div><figcaption>▲ 預設是下方中間的「第 N 頁」。</figcaption></figure>
+<p>「加頁碼」預設勾著，下面的選項：</p>
+<ul>
+<li><b>位置</b>：上下各三格（左、中、右），點一格就換位置。</li>
+<li><b>格式</b>：「第 N 頁」「- N -」「N / 總頁數」「N」，或「流水號」。</li>
+<li><b>從第幾號</b>：第一個印出的號碼。例如這份接在別份後面，從 31 開始。</li>
+<li><b>字級</b>：8 到 14 pt，預設 10 pt。</li>
+<li><b>第一頁不印（封面），從第二頁開始數</b>：勾了以後，第一頁不印，第二頁印第一個號碼。</li>
+</ul>
+<p>選項下面一行寫著「例：第一頁印「第 1 頁」」，可以先確認號碼對不對。</p>
+<p>放了好幾份時，右邊上方有選單可以換一份看；箭頭換頁。</p>
+
+<h2 id="bates">流水號</h2>
+<p>格式選「流水號」時，多出「前綴」與「位數」兩格。前綴預設「ABC」、位數 6，第一頁印「ABC000001」。前綴可以改成案號簡稱或自己的代號，位數是號碼補零到幾位（1 到 10）。</p>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">流水號與浮水印的設定</p><img src="../../assets/guide/page-numbers-watermark/bates.webp" alt="格式選流水號：前綴 ABC、位數 6，例：第一頁印「ABC000001」；加浮水印：文字僅供閱卷使用、斜放、每頁一個、透明度 15%" width="340" height="555" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">第 2 頁蓋好的樣子</p><img src="../../assets/guide/page-numbers-watermark/bates-preview.webp" alt="偵卷.pdf 第 2 頁：中間斜放淡灰色的「僅供閱卷使用」，右下角印著 ABC000002" width="640" height="725" loading="lazy" decoding="async"></div></div><figcaption>▲ 流水號放在右下，第 2 頁印「ABC000002」，中間是斜放的浮水印。</figcaption></figure>
+<p>放了好幾份時，每一份都從「從第幾號」開始編，不會接續上一份。要整批連續編號，先用「頁面整理」合併成一份，或每份分開輸出、各自填起始號碼。</p>
+
+<h2 id="watermark">第二步之二：浮水印</h2>
+<p>勾「加浮水印」，下面的選項：</p>
+<ul>
+<li><b>文字</b>：預設「僅供閱卷使用」，可以改成其他字。空白時不能輸出。</li>
+<li><b>方向</b>：「斜放」或「水平」。</li>
+<li><b>排法</b>：「每頁一個」放在頁面中間，「鋪滿」整頁重複排滿（字會小一點）。</li>
+<li><b>透明度</b>：5% 到 50%，預設 15%。數字越大越深，也越容易蓋住下面的字。</li>
+</ul>
+<figure class="shot"><div class="shot-card" style="max-width:640px"><img src="../../assets/guide/page-numbers-watermark/tiled-preview.webp" alt="浮水印選水平、鋪滿：「僅供閱卷使用」整頁排滿" width="640" height="725" loading="lazy" decoding="async"></div><figcaption>▲ 水平、鋪滿的樣子。</figcaption></figure>
+<p>只要浮水印、不要頁碼時，把「加頁碼」取消勾選。兩個都取消時，會提醒「頁碼或浮水印至少打開一個」，不能往下。</p>
+<p>確認後按「下一步：輸出」。</p>
+
+<h2 id="step3">第三步：輸出</h2>
+<p>左邊「會做的事」寫出頁碼與浮水印的設定，要改就按「回上一步改設定」。右邊列出每一份會產生的檔案與頁數。</p>
+<figure class="shot"><div class="shot-card" style="max-width:995px"><img src="../../assets/guide/page-numbers-watermark/output.webp" alt="輸出設定：頁碼流水號・下右・從 1 起，浮水印「僅供閱卷使用」・斜放・每頁一個・透明度 15%；會產生 2 個檔案：偵卷_頁碼與浮水印.pdf、院卷_頁碼與浮水印.pdf" width="995" height="385" loading="lazy" decoding="async"></div><figcaption>▲ 兩份各一個檔案，檔名加上「_頁碼與浮水印」。</figcaption></figure>
+<p>檔名是原檔名加上「_頁碼」「_浮水印」或「_頁碼與浮水印」。按右上角的「開始輸出 N 個檔案」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:665px"><img src="../../assets/guide/page-numbers-watermark/done.webp" alt="輸出完成：產生了 2 個檔案，2 份 PDF" width="665" height="72" loading="lazy" decoding="async"></div><figcaption>▲ 產生 2 份 PDF。</figcaption></figure>
+<p>檔案存在「下載項目 › 審判工具箱」底下新開的資料夾，也可以在輸出前用「存到 › 選擇…」換位置。</p>
+
+<h2 id="iphone">在 iPhone・iPad 上</h2>
+<p>選項相同。iPhone 上「蓋好的樣子」在上、設定在下，按鈕在畫面下方，輸出的檔案在「檔案」App 的「我的 iPhone › 審判工具箱」。細節在<a href="../../guide/iphone-ipad/">在 iPhone・iPad 上使用</a>那篇。</p>
+
+<h2 id="limits">做不到的事／要注意</h2>
+<ul>
+<li>頁碼沒有底色，原頁同一個位置已經有字（例如法院蓋的頁碼）時會疊在一起。請在預覽翻幾頁看，必要時換位置。</li>
+<li>頁碼與浮水印的文字可以被搜尋、複製出來。之後再用「PDF 轉 Markdown」等工具處理這份檔案時，文字裡也會出現頁碼與浮水印的字。</li>
+<li>浮水印是疊上去的一層，可以用 PDF 編輯軟體拿掉，不能當作防止複製或外流的保護。</li>
+<li>顏色、字型不能改；只能加文字浮水印，不能加圖片。</li>
+<li>「N / 總頁數」的總數是最後一頁印的號碼；從第幾號不是 1 時，它不等於頁數。</li>
+<li>原檔有開啟密碼時，輸出的檔案沒有密碼。需要的話，用<a href="../../guide/password/">密碼</a>工具再加上。</li>
+</ul>
+<p>要做附目錄、蓋證物編號的一整冊，用<a href="../../guide/exhibit-book/">證物冊</a>，它也會加全冊頁碼。簡短的步驟在<a href="../../support/#tool-stamp">使用說明</a>。</p>
+</div>
+<section class="post-faq"><h2 id="faq">常見問題</h2><h3>加了頁碼，原本的文字還能搜尋嗎？</h3><p>可以。頁碼與浮水印是疊在原頁上的一層，原本的頁面內容不會被重畫，文字一樣可以搜尋、複製。</p><h3>好幾份一起處理，流水號會接續嗎？</h3><p>不會。每一份都從「從第幾號」開始編。要連續編號，先用「頁面整理」合併成一份，或每份分開輸出並各自填起始號碼。</p><h3>封面可以不印頁碼嗎？</h3><p>可以。勾「第一頁不印（封面），從第二頁開始數」，第一頁不印，第二頁印第一個號碼。</p></section>
+<nav class="guide-pager" aria-label="上一篇與下一篇"><a class="prev" href="../../guide/deidentify/"><span>上一篇</span>把卷證裡的個資換成代號：去識別化教學</a><a class="next" href="../../guide/password/"><span>下一篇</span>替 PDF 加上或拿掉開啟密碼：密碼教學</a></nav>
+<aside class="post-cta"><img src="../../assets/icon-192.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><h2>審判工具箱</h2>
+<p>審判工具箱是給律師與法務助理用的 Mac、iPhone 與 iPad App。十三個工具：替卷證加書籤、依陳述人切開筆錄、全文搜尋、轉成 Markdown、做證物冊、去識別化，也能到司法院網站下載判決。卷證只在裝置上處理，不會上傳。</p><div class="stores"><span class="store soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.27-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.67zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg><span>即將在 App Store 推出</span></span></div><p class="small"><a href="../../">看審判工具箱的介紹</a></p></aside>
+<p class="more"><a href="../../guide/">← 所有教學</a></p>
+</div></article></main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot-links">
+<a href="../../iphone/">iPhone 版</a>
+<a href="../../ipad/">iPad 版</a>
+<a href="../../guide/">教學</a>
+<a href="../../blog/">文章</a>
+<a href="../../support/">使用說明</a>
+<a href="../../privacy/">隱私權</a>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">使用者授權合約</a>
+<a href="mailto:sona.orbit.hi@gmail.com">sona.orbit.hi@gmail.com</a>
+</div>
+<p class="copy">© 2026 Sona Orbit</p>
+</div></footer>
+</body>
+</html>

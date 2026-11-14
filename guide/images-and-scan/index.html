@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||"").trim().slice(0,60)});}},true);</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圖片轉 PDF、PDF 轉圖片：圖片與掃描教學｜審判工具箱</title>
+<meta name="description" content="用審判工具箱把幾張圖片合成一份 PDF、把 PDF 每一頁存成圖片，或把大小不一的頁面縮放成 A4；iPhone・iPad 還可以用相機掃描紙本。這篇說明三種做法的設定與輸出。">
+<meta name="text-scale" content="scale">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="審判工具箱">
+<meta property="og:title" content="圖片轉 PDF、PDF 轉圖片：圖片與掃描教學｜審判工具箱">
+<meta property="og:description" content="用審判工具箱把幾張圖片合成一份 PDF、把 PDF 每一頁存成圖片，或把大小不一的頁面縮放成 A4；iPhone・iPad 還可以用相機掃描紙本。這篇說明三種做法的設定與輸出。">
+<meta property="og:url" content="https://sona-orbit.github.io/trial-toolbox/guide/images-and-scan/">
+<meta property="og:image" content="https://sona-orbit.github.io/trial-toolbox/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sona-orbit.github.io/trial-toolbox/guide/images-and-scan/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icon-32.png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&amp;display=swap&amp;text=%204ADFMPacdehino%E3%80%81%E3%83%BB%E4%B8%80%E4%B8%8D%E4%BA%8B%E4%BB%80%E4%BB%A5%E4%BB%B6%E5%80%8B%E5%81%9A%E5%85%A5%E5%85%B7%E5%87%BA%E5%88%A4%E5%88%B0%E5%8F%AF%E5%93%AA%E5%95%8F%E5%97%8E%E5%9C%96%E5%AD%B8%E5%AF%A9%E5%B7%A5%E5%B8%B8%E5%BA%A6%E6%84%8F%E6%88%90%E6%8E%83%E6%8F%8F%E6%94%BE%E6%95%99%E6%96%87%E6%9C%83%E6%9E%90%E6%A1%88%E6%A8%A1%E6%A9%9F%E6%AA%94%E6%AD%A5%E6%B3%95%E6%B3%A8%E7%85%A7%E7%89%87%E7%89%88%E7%94%A8%E7%9A%84%E7%9B%B8%E7%AC%AC%E7%AE%B1%E7%B3%8A%E7%B8%AE%E8%88%87%E8%A6%81%E8%A6%8B%E8%A7%A3%E8%AE%8A%E8%BC%B8%E8%BD%89%E9%80%99%E9%81%B8%E9%A1%8C%E9%BA%BC%EF%BC%8F%EF%BC%9A%EF%BC%9F">
+<link rel="stylesheet" href="../../assets/style.css?v=72cf8515">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/trial-toolbox/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "圖片轉 PDF、PDF 轉圖片：圖片與掃描教學", "description": "用審判工具箱把幾張圖片合成一份 PDF、把 PDF 每一頁存成圖片，或把大小不一的頁面縮放成 A4；iPhone・iPad 還可以用相機掃描紙本。這篇說明三種做法的設定與輸出。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://sona-orbit.github.io/trial-toolbox/guide/images-and-scan/", "author": {"@type": "Person", "name": "Sona Orbit"}, "publisher": {"@type": "Organization", "name": "Sona Orbit"}, "about": {"@type": "SoftwareApplication", "name": "審判工具箱", "url": "https://sona-orbit.github.io/trial-toolbox/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "照片轉成 PDF 會變模糊嗎？", "acceptedAnswer": {"@type": "Answer", "text": "JPG 會原樣放進 PDF，不重新壓縮；PNG 用不失真的方式放進去。HEIC 會轉成 JPG。選「放進 A4」時，頁面大小是 A4，但圖片本身的像素不變。"}}, {"@type": "Question", "name": "PDF 轉圖片要選哪個解析度？", "acceptedAnswer": {"@type": "Answer", "text": "貼進簡報、傳訊息用「螢幕閱讀」（150 dpi）；要列印或放大看小字選「列印」（300 dpi），檔案會比較大。"}}, {"@type": "Question", "name": "Mac 版可以用相機掃描嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不行，相機掃描只有 iPhone・iPad。Mac 上請把掃描器存成的 PDF 或圖片放進來。"}}]}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="../../"><img src="../../assets/icon-192.webp" alt="" width="32" height="32"><span>審判工具箱</span></a>
+<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../guide/" class="nav-guide" aria-current="page">教學</a><a href="../../blog/" class="nav-blog">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
+</div></header>
+<main><article class="post"><div class="wrap narrow">
+<p class="eyebrow"><a href="../../guide/">教學</a></p>
+<h1>圖片轉 PDF、PDF 轉圖片：圖片與掃描教學</h1>
+<p class="post-meta"><time datetime="2026-11-14">2026.11.14</time>・約 5 分鐘</p>
+<p class="lead">當事人傳來的照片要附進書狀、書狀的某幾頁要貼進簡報、卷裡夾著大小不一的頁面想統一印成 A4，這些零碎的轉換都在「圖片與掃描」。在 iPhone・iPad 上，也可以直接用相機把紙本掃成 PDF。</p>
+
+
+<nav class="post-toc" aria-label="目錄"><b>目錄</b><ol><li><a href="#what">這個工具做什麼</a></li><li><a href="#step1">第一步：選做法、放入檔案</a></li><li><a href="#topdf">圖片轉 PDF</a></li><li><a href="#toimg">PDF 轉圖片</a></li><li><a href="#fit">縮放成 A4</a></li><li><a href="#files">輸出的檔案</a></li><li><a href="#scan">iPhone・iPad：用相機掃描文件</a></li><li><a href="#limits">做不到的事／要注意</a></li></ol></nav>
+<div class="post-body">
+<h2 id="what">這個工具做什麼</h2>
+<p>「圖片與掃描」在首頁的「頁面」那一組，有三種做法：</p>
+<ul>
+<li><b>圖片轉 PDF</b>：幾張圖片照順序合成一份 PDF。</li>
+<li><b>PDF 轉圖片</b>：PDF 的每一頁存成一張圖片。</li>
+<li><b>縮放成 A4</b>：大小不一的頁面，等比例縮放成 A4（內容不重畫）。</li>
+</ul>
+<p>在 iPhone・iPad 上另外可以<a href="#scan">用相機掃描文件</a>。原本的檔案不會被改動。</p>
+
+<h2 id="step1">第一步：選做法、放入檔案</h2>
+<p>從首頁或側邊欄點「圖片與掃描」。上方先選要做哪一種，再把圖片或 PDF 拖進來，或按「選擇檔案…」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:885px"><img src="../../assets/guide/images-and-scan/intake.webp" alt="圖片與掃描的第一步：上方三種做法，選了圖片轉 PDF，下面放了 3 張圖片，每張右上有 ✕" width="885" height="365" loading="lazy" decoding="async"></div><figcaption>▲ 選「圖片轉 PDF」，放了 3 張圖片。</figcaption></figure>
+<ul>
+<li>圖片轉 PDF：JPG、PNG、HEIC 都可以，可以一次放好幾張。放錯的按縮圖右上的 ✕ 拿掉。</li>
+<li>PDF 轉圖片、縮放成 A4：放 PDF，可以一次放好幾份。有開啟密碼的會先問密碼。</li>
+<li>在「圖片轉 PDF」時拖進 PDF，會自動切到「PDF 轉圖片」。</li>
+</ul>
+<p>按右上角的「下一步：設定與預覽」。</p>
+
+<h2 id="topdf">圖片轉 PDF</h2>
+<p>左邊是設定與圖片的縮圖，右邊是點到的那一張放進 PDF 的樣子。改設定，右邊跟著變。</p>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">設定與縮圖</p><img src="../../assets/guide/images-and-scan/topdf-set.webp" alt="圖片轉 PDF 的設定：頁面大小選放進 A4，可勾四邊留白；下面是可以拖曳排序的縮圖" width="374" height="541" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">在 PDF 裡的樣子</p><img src="../../assets/guide/images-and-scan/topdf-prev.webp" alt="右邊是第 1 張圖片放進 PDF 的樣子，下面寫著 JPG 會原樣放進 PDF，不重新壓縮" width="626" height="730" loading="lazy" decoding="async"></div></div><figcaption>▲ 放進 A4，第 1 張放進去的樣子。</figcaption></figure>
+<ul>
+<li><b>頁面大小</b>：「放進 A4」每張放進一頁 A4，等比例縮放、置中，橫的圖片用橫式 A4，小的圖片也會放大到 A4；可以勾「四邊留白（約 1.3 公分）」。「照原圖大小」依圖片記錄的解析度決定頁面大小（沒有記錄當 72 dpi）。</li>
+<li><b>順序</b>：拖曳縮圖換順序，PDF 的頁序就是縮圖的順序。</li>
+<li>JPG 會原樣放進 PDF，不重新壓縮，畫質不會變差。PNG 等不失真的格式也不會變差；HEIC 會轉成 JPG 放進去。</li>
+</ul>
+
+<h2 id="toimg">PDF 轉圖片</h2>
+<p>選「格式」與「解析度」：</p>
+<figure class="shot"><div class="shot-card" style="max-width:265px"><img src="../../assets/guide/images-and-scan/toimg-opt.webp" alt="PDF 轉圖片的設定：格式 JPG 或 PNG，解析度選列印時 A4 頁面約 2,480×3,507 像素（300 dpi）" width="265" height="255" loading="lazy" decoding="async"></div><figcaption>▲ JPG、列印（300 dpi）。下面寫著 A4 頁面大約幾像素。</figcaption></figure>
+<ul>
+<li><b>格式</b>：JPG 檔案小，適合照片與掃描；PNG 不失真，檔案比較大。</li>
+<li><b>解析度</b>：「螢幕閱讀」是 150 dpi（A4 一頁約 1,240×1,754 像素），「列印」是 300 dpi（約 2,480×3,507 像素）。要貼進簡報或傳訊息用螢幕閱讀就夠；要印出來或放大看小字，選列印。</li>
+</ul>
+<p>右邊可以翻頁看 PDF 的頁面。到輸出這一步，每份 PDF 合成一列，寫著第一張與最後一張的檔名、幾張、格式與解析度。</p>
+<figure class="shot"><div class="shot-card" style="max-width:661px"><img src="../../assets/guide/images-and-scan/toimg-plan.webp" alt="會產生 8 個檔案：偵卷_第001頁.jpg 到第005頁在「偵卷」裡，院卷的 3 張在「院卷」裡，螢幕閱讀 150 dpi" width="661" height="145" loading="lazy" decoding="async"></div><figcaption>▲ 兩份 PDF、8 頁，存成 8 張 JPG，每份一個資料夾。</figcaption></figure>
+
+<h2 id="fit">縮放成 A4</h2>
+<p>卷裡有 B4、Letter 或尺寸奇怪的頁面，想統一成 A4 列印或合冊時用。頁面方向依內容，橫的頁用橫式 A4；可以勾「四邊留白（約 1.3 公分）」。</p>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">設定</p><img src="../../assets/guide/images-and-scan/fit-set.webp" alt="縮放成 A4 的設定：A4，頁面方向依內容，勾了四邊留白（約 1.3 公分）" width="374" height="219" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">縮放成 A4 的樣子</p><img src="../../assets/guide/images-and-scan/fit-prev.webp" alt="院卷.pdf 第 1 頁縮放成 A4 的樣子，下面寫著頁面內容不重畫，只縮放與置中" width="626" height="730" loading="lazy" decoding="async"></div></div><figcaption>▲ 院卷第 1 頁縮放成 A4、四邊留白的樣子。</figcaption></figure>
+<p>頁面內容不重畫，只縮放與置中，所以原本的文字還能搜尋、複製。右邊可以翻頁，每一頁都看得到縮放後的樣子。</p>
+
+<h2 id="files">輸出的檔案</h2>
+<p>確認好了，按右上角的「開始輸出 N 個檔案」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:661px"><img src="../../assets/guide/images-and-scan/done.webp" alt="輸出完成：產生了 1 個檔案，1 份 PDF" width="661" height="66" loading="lazy" decoding="async"></div><figcaption>▲ 3 張圖片合成一份 PDF。</figcaption></figure>
+<ul>
+<li>圖片轉 PDF：一份 PDF。一張圖時檔名是圖片的名稱；好幾張時是「第一張的名稱_等3張.pdf」。</li>
+<li>PDF 轉圖片：每份 PDF 一個資料夾，每一頁一張，檔名是「檔名_第001頁.jpg」。</li>
+<li>縮放成 A4：「原檔名_A4.pdf」，每份一個。</li>
+</ul>
+<p>檔案存在「下載項目 › 審判工具箱」底下這次新開的資料夾，名稱是第一個檔案的名稱加上做法，例如「偵卷 PDF 轉圖片」。</p>
+
+<h2 id="scan">iPhone・iPad：用相機掃描文件</h2>
+<p>iPhone 的首頁最上面、iPad 首頁的右上角，有「用相機掃描文件」。「圖片與掃描」第一步選「圖片轉 PDF」時，也有同一個按鈕。</p>
+<figure class="shot"><div class="shot-card" style="max-width:660px"><img src="../../assets/guide/images-and-scan/scan-home.webp" alt="iPhone 首頁最上面的「用相機掃描文件」" width="660" height="250" loading="lazy" decoding="async"></div><figcaption>▲ iPhone 首頁最上面。</figcaption></figure>
+<ol>
+<li>第一次按會問能不能用相機，說明寫著「用相機掃描紙本文件，轉成 PDF。影像只留在這台裝置。」按「允許」。</li>
+<li>出現系統的掃描畫面，對準紙本拍下。系統會自動找紙張邊緣、拉正；可以連續拍好幾頁，全部拍完再結束掃描畫面。</li>
+<li>App 把拍好的頁存成一份 PDF（每頁放進 A4），然後顯示「掃描好了，N 頁」。</li>
+</ol>
+<figure class="shot"><div class="shot-card" style="max-width:645px"><img src="../../assets/guide/images-and-scan/scan-done.webp" alt="實機畫面：掃描好了，1 頁；下面問要不要接著用可搜尋 PDF、書籤形成、頁面整理、頁碼與浮水印、證物冊、密碼" width="645" height="890" loading="lazy" decoding="async"></div><figcaption>▲ 掃描好了，下面可以直接接到其他工具。</figcaption></figure>
+<p>下面問「接著用其他工具處理？」，點一個就把這份 PDF 放進那個工具：可搜尋 PDF、書籤形成、頁面整理、頁碼與浮水印、證物冊、密碼。掃描出來的是圖片，先做成「可搜尋 PDF」，之後才找得到字。不用接著處理，按「完成」。</p>
+<p>掃好的 PDF 存在「檔案」App 的「我的 iPhone（iPad）› 審判工具箱」裡的「掃描 月日-時分」資料夾，也可以按「在『檔案』顯示」打開。拍下的影像只用來做成 PDF。更多 iPhone・iPad 的操作在<a href="../../guide/iphone-ipad/">在 iPhone・iPad 上使用</a>。</p>
+<p>Mac 沒有相機掃描，要掃紙本請用掃描器存成 PDF 或圖片，再放進來。</p>
+
+<h2 id="limits">做不到的事／要注意</h2>
+<ul>
+<li>相機掃描的 PDF 是圖片，沒有文字。要搜尋、轉 Markdown，先用<a href="../../guide/searchable-pdf/">可搜尋 PDF</a>辨識文字；辨識會有錯字。</li>
+<li>圖片轉 PDF：透明的地方會鋪成白色；16 位元的 PNG 轉成 8 位元；CMYK 的 JPG 會重新壓縮。</li>
+<li>縮放成 A4 只搬連結；便利貼、螢光筆、表單欄位這類註解不會留下來。</li>
+<li>PDF 轉圖片沒有選頁的設定，會把每一頁都存成圖片。只要某幾頁，先用<a href="../../guide/page-tools/">頁面整理</a>拆出那幾頁。</li>
+</ul>
+<p>下一篇：<a href="../../guide/hand-to-ai/">交給 AI 教學</a>。簡短的步驟在<a href="../../support/#tool-images">使用說明</a>。</p>
+</div>
+<section class="post-faq"><h2 id="faq">常見問題</h2><h3>照片轉成 PDF 會變模糊嗎？</h3><p>JPG 會原樣放進 PDF，不重新壓縮；PNG 用不失真的方式放進去。HEIC 會轉成 JPG。選「放進 A4」時，頁面大小是 A4，但圖片本身的像素不變。</p><h3>PDF 轉圖片要選哪個解析度？</h3><p>貼進簡報、傳訊息用「螢幕閱讀」（150 dpi）；要列印或放大看小字選「列印」（300 dpi），檔案會比較大。</p><h3>Mac 版可以用相機掃描嗎？</h3><p>不行，相機掃描只有 iPhone・iPad。Mac 上請把掃描器存成的 PDF 或圖片放進來。</p></section>
+<nav class="guide-pager" aria-label="上一篇與下一篇"><a class="prev" href="../../guide/page-tools/"><span>上一篇</span>合併、拆分、刪頁：頁面整理教學</a><a class="next" href="../../guide/hand-to-ai/"><span>下一篇</span>請 AI 工具整理輸出的卷證：交給 AI 教學（Mac）</a></nav>
+<aside class="post-cta"><img src="../../assets/icon-192.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><h2>審判工具箱</h2>
+<p>審判工具箱是給律師與法務助理用的 Mac、iPhone 與 iPad App。十三個工具：替卷證加書籤、依陳述人切開筆錄、全文搜尋、轉成 Markdown、做證物冊、去識別化，也能到司法院網站下載判決。卷證只在裝置上處理，不會上傳。</p><div class="stores"><span class="store soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.27-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.67zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg><span>即將在 App Store 推出</span></span></div><p class="small"><a href="../../">看審判工具箱的介紹</a></p></aside>
+<p class="more"><a href="../../guide/">← 所有教學</a></p>
+</div></article></main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot-links">
+<a href="../../iphone/">iPhone 版</a>
+<a href="../../ipad/">iPad 版</a>
+<a href="../../guide/">教學</a>
+<a href="../../blog/">文章</a>
+<a href="../../support/">使用說明</a>
+<a href="../../privacy/">隱私權</a>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">使用者授權合約</a>
+<a href="mailto:sona.orbit.hi@gmail.com">sona.orbit.hi@gmail.com</a>
+</div>
+<p class="copy">© 2026 Sona Orbit</p>
+</div></footer>
+</body>
+</html>

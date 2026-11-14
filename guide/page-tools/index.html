@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||"").trim().slice(0,60)});}},true);</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>合併、拆分、刪頁：頁面整理教學｜審判工具箱</title>
+<meta name="description" content="用審判工具箱的「頁面整理」看縮圖合併幾份 PDF、拆開、重排、旋轉、刪頁，並找出疑似空白的頁。這篇說明每個按鈕的用法、四種輸出方式，以及找空白頁要人確認的原因。">
+<meta name="text-scale" content="scale">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="審判工具箱">
+<meta property="og:title" content="合併、拆分、刪頁：頁面整理教學｜審判工具箱">
+<meta property="og:description" content="用審判工具箱的「頁面整理」看縮圖合併幾份 PDF、拆開、重排、旋轉、刪頁，並找出疑似空白的頁。這篇說明每個按鈕的用法、四種輸出方式，以及找空白頁要人確認的原因。">
+<meta property="og:url" content="https://sona-orbit.github.io/trial-toolbox/guide/page-tools/">
+<meta property="og:image" content="https://sona-orbit.github.io/trial-toolbox/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sona-orbit.github.io/trial-toolbox/guide/page-tools/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icon-32.png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&amp;display=swap&amp;text=%20DFPadehino%E3%80%81%E3%83%BB%E4%B8%80%E4%B8%89%E4%B8%8A%E4%B8%8D%E4%B9%8B%E4%BA%8B%E4%BA%8C%E4%BB%80%E4%BB%A5%E4%BB%BD%E4%BD%B5%E5%80%8B%E5%81%9A%E5%85%A5%E5%85%B7%E5%87%BA%E5%88%86%E5%88%A4%E5%88%AA%E5%88%B0%E5%8B%95%E5%8E%9F%E5%8F%8D%E5%8F%AF%E5%90%88%E5%95%8F%E5%97%8E%E5%9B%9E%E5%9C%A8%E5%A5%BD%E5%AD%97%E5%AD%B8%E5%AF%A9%E5%B0%B1%E5%B7%A5%E5%B8%B8%E5%B9%BE%E5%BC%8F%E5%BE%8C%E5%BE%9E%E6%84%8F%E6%89%BE%E6%8A%8A%E6%8B%86%E6%8E%83%E6%8E%89%E6%8E%92%E6%94%BE%E6%95%99%E6%95%B4%E6%96%B9%E6%97%8B%E6%9C%83%E6%9C%89%E6%9C%AC%E6%A1%88%E6%AA%94%E6%AD%A3%E6%AD%A5%E6%B3%A8%E7%90%86%E7%99%BD%E7%9A%84%E7%A9%BA%E7%AC%AC%E7%AE%B1%E8%83%BD%E8%87%AA%E8%A3%A1%E8%A6%81%E8%A6%8B%E8%BC%B8%E8%BD%89%E9%80%99%E9%81%B8%E9%82%84%E9%87%8D%E9%96%8B%E9%99%A4%E9%9D%A2%E9%A0%81%E9%A1%8C%E9%BA%BC%EF%BC%88%EF%BC%89%EF%BC%8F%EF%BC%9A%EF%BC%9F">
+<link rel="stylesheet" href="../../assets/style.css?v=72cf8515">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/trial-toolbox/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "合併、拆分、刪頁：頁面整理教學", "description": "用審判工具箱的「頁面整理」看縮圖合併幾份 PDF、拆開、重排、旋轉、刪頁，並找出疑似空白的頁。這篇說明每個按鈕的用法、四種輸出方式，以及找空白頁要人確認的原因。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://sona-orbit.github.io/trial-toolbox/guide/page-tools/", "author": {"@type": "Person", "name": "Sona Orbit"}, "publisher": {"@type": "Organization", "name": "Sona Orbit"}, "about": {"@type": "SoftwareApplication", "name": "審判工具箱", "url": "https://sona-orbit.github.io/trial-toolbox/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "找空白頁會不會刪掉有字的頁？", "acceptedAnswer": {"@type": "Answer", "text": "App 不會自己刪。找到的頁只用虛線框標出來，要你按「逐頁確認」或「全部照建議處理」才刪；很淡的鉛筆字可能被當成空白，請先看縮圖。刪錯了可以按「復原」。"}}, {"@type": "Question", "name": "合併之後還能分回原本的幾份嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。合併時每一份會加上一個以檔名為名的書籤，輸出時選「依第一層書籤拆開」，就依原本的檔案分開。"}}, {"@type": "Question", "name": "可以把掃反的頁自動轉正嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不行，App 不會偵測頁面方向。請在縮圖上找出掃反的頁，選起來按「旋轉選取的頁」。"}}]}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="../../"><img src="../../assets/icon-192.webp" alt="" width="32" height="32"><span>審判工具箱</span></a>
+<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../guide/" class="nav-guide" aria-current="page">教學</a><a href="../../blog/" class="nav-blog">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
+</div></header>
+<main><article class="post"><div class="wrap narrow">
+<p class="eyebrow"><a href="../../guide/">教學</a></p>
+<h1>合併、拆分、刪頁：頁面整理教學</h1>
+<p class="post-meta"><time datetime="2026-11-14">2026.11.14</time>・約 6 分鐘</p>
+<p class="lead">閱卷拿到的卷證，常常有掃反的頁、夾在中間的空白頁，或是想把幾份合成一份、把一大卷拆成幾份。「頁面整理」把每一頁排成縮圖，選好頁再按按鈕；做完的樣子在輸出前就能逐頁預覽。</p>
+
+
+<nav class="post-toc" aria-label="目錄"><b>目錄</b><ol><li><a href="#what">這個工具做什麼</a></li><li><a href="#step1">第一步：放入 PDF（要合併就放好幾份）</a></li><li><a href="#select">第二步：選頁</a></li><li><a href="#edit">旋轉、刪除、重排、從這裡拆開</a></li><li><a href="#blank">找空白頁</a></li><li><a href="#output">第三步：選輸出方式</a></li><li><a href="#files">輸出的檔案</a></li><li><a href="#iphone">在 iPhone・iPad 上</a></li><li><a href="#limits">做不到的事／要注意</a></li></ol></nav>
+<div class="post-body">
+<h2 id="what">這個工具做什麼</h2>
+<p>「頁面整理」在首頁的「頁面」那一組。放入 PDF 後，每一頁排成縮圖，可以：</p>
+<ul>
+<li><b>合併</b>：放好幾份，頁面依序接在一起。</li>
+<li><b>拆分</b>：在指定的頁拆開、每幾頁拆一份，或依第一層書籤拆開。</li>
+<li><b>重排</b>：拖曳縮圖換順序。</li>
+<li><b>旋轉</b>、<b>刪頁</b>。</li>
+<li><b>找空白頁</b>：找出疑似空白的頁，由你確認後再刪。</li>
+</ul>
+<p>改錯了可以按「復原」。原本的 PDF 不會被改動，輸出的是另存的新檔。</p>
+
+<h2 id="step1">第一步：放入 PDF（要合併就放好幾份）</h2>
+<p>從首頁或側邊欄點「頁面整理」，把 PDF 拖進來，或按「選擇檔案…」。只整理一份就放一份；要合併的話可以一次放好幾份，下一步也能再加。</p>
+<figure class="shot"><div class="shot-card" style="max-width:885px"><img src="../../assets/guide/page-tools/intake.webp" alt="頁面整理的第一步：放了偵卷加空白頁.pdf，7 頁，下面可以再拖一份進來" width="885" height="235" loading="lazy" decoding="async"></div><figcaption>▲ 放了一份 7 頁的 PDF。</figcaption></figure>
+<p>放好幾份時，頁面照清單的順序接在一起。有開啟密碼的 PDF 會先問密碼（見<a href="../../guide/password/">密碼教學</a>）。按右上角的「下一步：整理頁面」。</p>
+
+<h2 id="select">第二步：選頁</h2>
+<p>第二步是縮圖格。上面一列寫著檔名與頁數（合併時寫「2 份合併・8 頁」），右邊是動作按鈕。</p>
+<figure class="shot"><div class="shot-card" style="max-width:992px"><img src="../../assets/guide/page-tools/merge.webp" alt="偵卷與院卷兩份合併成 8 頁，選了第 6 頁，上面一列是再加一份、旋轉、刪除、從這裡拆開、找空白頁" width="992" height="220" loading="lazy" decoding="async"></div><figcaption>▲ 兩份合併成 8 頁，點了第 6 頁。</figcaption></figure>
+<ul>
+<li><b>點縮圖</b>選那一頁，選到的頁有朱紅框，再點一次取消。</li>
+<li>按住 ⌘ 再點，可以加選；按住 Shift 再點，選一個範圍。上面會寫「已選 N 頁」。</li>
+<li>在縮圖上按右鍵，有「旋轉」「從這裡拆開」「刪除」。</li>
+<li>這一步也可以按「再加一份（合併）」，再放一份 PDF，頁面接在最後面。</li>
+</ul>
+<p>300 頁的卷也可以直接捲動看縮圖，縮圖是捲到才載入。</p>
+
+<h2 id="edit">旋轉、刪除、重排、從這裡拆開</h2>
+<figure class="shot"><div class="shot-card" style="max-width:1020px"><img src="../../assets/guide/page-tools/edit.webp" alt="300 頁的卷：選了第 2、3 頁，第 4 頁旁有旋轉記號，第 8 頁後面有朱紅線與剪刀；右上寫著刪 1 頁、轉 1 頁後剩 299 頁" width="1020" height="292" loading="lazy" decoding="async"></div><figcaption>▲ 選了第 2、3 頁；第 4 頁轉過，縮圖旁有旋轉記號；第 8 頁後面是拆開的位置。</figcaption></figure>
+<ul>
+<li><b>旋轉選取的頁</b>：每按一次順時針轉 90 度，縮圖照新的方向顯示，頁碼旁多一個旋轉記號。</li>
+<li><b>刪除選取的頁</b>：拿掉選到的頁。Mac 也可以按 Delete 鍵。不能把所有頁都刪掉。</li>
+<li><b>拖曳縮圖</b>換順序。選了好幾頁時，拖其中一頁，整組一起搬。</li>
+<li><b>從這裡拆開</b>：從選到的第一頁開始拆成新的一份，那一頁前面出現朱紅線與剪刀。再按一次取消。第 1 頁不能拆。</li>
+<li><b>復原</b>：做過任何修改之後才會出現，一次退一步。Mac 也可以按 ⌘Z。</li>
+</ul>
+<p>右上角會寫目前的結果，例如「刪 1 頁、轉 1 頁後剩 299 頁」。這時還沒有產生任何檔案。</p>
+
+<h2 id="blank">找空白頁</h2>
+<p>按「找空白頁」，上方顯示「正在找疑似空白的頁…」與進度。找完後，疑似空白的頁用虛線框標出來，縮圖下面標「空白？」（很可能是空白）或「可能空白」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:992px"><img src="../../assets/guide/page-tools/blank.webp" alt="找空白頁的結果：找到 2 頁疑似空白（虛線框），第 3 頁與第 7 頁標著「空白？」，旁邊是逐頁確認與全部照建議處理" width="992" height="300" loading="lazy" decoding="async"></div><figcaption>▲ 找到 2 頁疑似空白。</figcaption></figure>
+<p>上方的說明列有兩個按鈕：</p>
+<ul>
+<li><b>逐頁確認</b>：打開「逐頁確認疑似空白的頁」，每一頁放大顯示，附上信心的百分比與判斷的理由。很可能是空白的已先勾好，其餘的自己看縮圖決定要不要勾，按「刪除勾選的 N 頁」。</li>
+<li><b>全部照建議處理</b>：直接刪掉很可能是空白的頁。有些頁只是「可能空白」時，這個按鈕會變成「刪除很可能空白的 N 頁」，只刪把握高的那些。</li>
+</ul>
+<p>沒找到時會寫「沒有找到疑似空白的頁。」</p>
+<p>判斷只看頁面上的墨色。淡淡的鉛筆字、很淡的掃描也可能被當成空白，所以 App 不會自己刪，一定要你按下去才刪。刪錯了按「復原」。另外，App 不會偵測頁面方向，掃反的頁要自己看縮圖找出來旋轉。</p>
+<p>整理好了，按右上角的「下一步：輸出」。</p>
+
+<h2 id="output">第三步：選輸出方式</h2>
+<p>輸出設定的「輸出方式」有四種：</p>
+<ul>
+<li><b>存成一份 PDF</b>：照整理好的樣子存成一份。</li>
+<li><b>在「從這裡拆開」的地方拆開</b>：上一步按過「從這裡拆開」的地方拆成好幾份。有拆開的地方時，這一項會自動選好；沒有時，選了會寫「還沒有『從這裡拆開』的地方」，不能輸出。</li>
+<li><b>每 N 頁一份</b>：輸入每幾頁一份。</li>
+<li><b>依第一層書籤拆開</b>：每個第一層書籤一份。</li>
+</ul>
+<figure class="shot"><div class="shot-card" style="max-width:312px"><img src="../../assets/guide/page-tools/modes.webp" alt="輸出方式四選一：存成一份 PDF、在「從這裡拆開」的地方拆開（選了，拆成 2 份）、每 N 頁一份、依第一層書籤拆開" width="312" height="265" loading="lazy" decoding="async"></div><figcaption>▲ 四種輸出方式。上一步有拆開的地方，所以自動選了第二種。</figcaption></figure>
+<figure class="shot"><div class="shot-card" style="max-width:661px"><img src="../../assets/guide/page-tools/split-plan.webp" alt="會產生文字卷證300頁_整理後_第1-8頁.pdf（8 頁）與第9-299頁.pdf（291 頁），各有預覽" width="661" height="145" loading="lazy" decoding="async"></div><figcaption>▲ 在第 9 頁拆開：前 8 頁一份，後面 291 頁一份，都可以預覽。</figcaption></figure>
+<p>右邊列出會產生的檔案和頁數，有「預覽」的可以先一頁一頁翻，看到的就是輸出後的樣子。</p>
+<p>大卷想切成固定頁數，選「每 N 頁一份」：</p>
+<figure class="shot"><div class="shot-card" style="max-width:312px"><img src="../../assets/guide/page-tools/every-opt.webp" alt="選「每 N 頁一份」，下面輸入每 100 頁一份" width="312" height="167" loading="lazy" decoding="async"></div><figcaption>▲ 選「每 N 頁一份」，下面填頁數。</figcaption></figure>
+<figure class="shot"><div class="shot-card" style="max-width:661px"><img src="../../assets/guide/page-tools/every-plan.webp" alt="300 頁每 100 頁一份：第1-100頁、第101-200頁、第201-300頁三個檔案" width="661" height="187" loading="lazy" decoding="async"></div><figcaption>▲ 300 頁的卷每 100 頁一份，得到 3 個檔案。</figcaption></figure>
+<p>合併的時候，每一份會自動加上一個以檔名為名的書籤，原本的書籤排在它底下。所以合併、重排之後選「依第一層書籤拆開」，可以再依原本的檔案分開。</p>
+<figure class="shot"><div class="shot-card" style="max-width:661px"><img src="../../assets/guide/page-tools/bookmarks.webp" alt="偵卷與院卷合併後選「依第一層書籤拆開」：偵卷_整理後_01_偵卷.pdf（5 頁）與 02_院卷.pdf（3 頁）" width="661" height="132" loading="lazy" decoding="async"></div><figcaption>▲ 偵卷與院卷合併後，依第一層書籤拆回兩份。這種方式沒有預覽。</figcaption></figure>
+<p>書籤會跟著頁面走；刪掉的頁上的書籤，改指到後面最近的一頁。確認好了，按右上角的「開始輸出 N 個檔案」。</p>
+
+<h2 id="files">輸出的檔案</h2>
+<figure class="shot"><div class="shot-card" style="max-width:661px"><img src="../../assets/guide/page-tools/done.webp" alt="輸出完成：產生了 2 個檔案，2 份 PDF" width="661" height="66" loading="lazy" decoding="async"></div><figcaption>▲ 拆成兩份，輸出完成。</figcaption></figure>
+<ul>
+<li>存成一份：「第一份的檔名_整理後.pdf」。</li>
+<li>依拆開的地方或每 N 頁：「…_整理後_第1-8頁.pdf」這樣，檔名寫著頁碼範圍（整理後的頁碼）。</li>
+<li>依書籤：「…_整理後_01_書籤標題.pdf」，依序編號。第一個書籤前面還有頁面時，那些頁先出一份「書籤前」。</li>
+</ul>
+<p>檔案存在「下載項目 › 審判工具箱」底下這次新開的資料夾，例如「偵卷 頁面整理」。</p>
+
+<h2 id="iphone">在 iPhone・iPad 上</h2>
+<p>在 iPhone 上，縮圖排成三到四欄，動作收在畫面下方一列：旋轉、刪除、拆開、空白頁、加一份，改過之後多一個「復原」。點縮圖就加選或取消那一頁，不用按住其他鍵。</p>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">縮圖</p><img src="../../assets/guide/page-tools/phone-grid.webp" alt="iPhone 的頁面整理：縮圖排成四欄，選了第 3 頁，第 6 頁前面有剪刀，第 8 頁轉過" width="660" height="535" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">畫面下方</p><img src="../../assets/guide/page-tools/phone-bar.webp" alt="畫面下方一列：旋轉、刪除、拆開、空白頁、加一份、復原，再下面是合併 2 份、轉 1 頁・共 8 頁與「下一步：輸出」" width="660" height="245" loading="lazy" decoding="async"></div></div><figcaption>▲ iPhone：選了第 3 頁，第 6 頁前面是拆開的位置，第 8 頁轉過。</figcaption></figure>
+<p>iPad 的視窗夠寬時跟 Mac 相同，動作按鈕在縮圖上方一列。用相機掃描好的 PDF，可以在「接著用其他工具處理？」裡直接選「頁面整理」。輸出的檔案在「檔案」App 的「我的 iPhone（iPad）› 審判工具箱」。細節在<a href="../../guide/iphone-ipad/">在 iPhone・iPad 上使用</a>。</p>
+
+<h2 id="limits">做不到的事／要注意</h2>
+<ul>
+<li>不會偵測頁面方向，掃反的頁要自己找出來旋轉。</li>
+<li>找空白頁只看墨色，可能把很淡的頁當成空白。刪之前請看縮圖。</li>
+<li>沒有裁切頁面、調整頁面大小的功能。大小不一的頁面要統一成 A4，用<a href="../../guide/images-and-scan/">圖片與掃描</a>的「縮放成 A4」。</li>
+<li>合併時不會保留原檔的表單欄位、內嵌附件。</li>
+<li>「依第一層書籤拆開」需要 PDF 本身有書籤。沒有書籤的卷，可以先用<a href="../../guide/bookmarks/">書籤形成</a>加上書籤，或在這裡用「從這裡拆開」。</li>
+</ul>
+<p>下一篇：<a href="../../guide/images-and-scan/">圖片轉 PDF、PDF 轉圖片：圖片與掃描教學</a>。簡短的步驟在<a href="../../support/#tool-pages">使用說明</a>。</p>
+</div>
+<section class="post-faq"><h2 id="faq">常見問題</h2><h3>找空白頁會不會刪掉有字的頁？</h3><p>App 不會自己刪。找到的頁只用虛線框標出來，要你按「逐頁確認」或「全部照建議處理」才刪；很淡的鉛筆字可能被當成空白，請先看縮圖。刪錯了可以按「復原」。</p><h3>合併之後還能分回原本的幾份嗎？</h3><p>可以。合併時每一份會加上一個以檔名為名的書籤，輸出時選「依第一層書籤拆開」，就依原本的檔案分開。</p><h3>可以把掃反的頁自動轉正嗎？</h3><p>不行，App 不會偵測頁面方向。請在縮圖上找出掃反的頁，選起來按「旋轉選取的頁」。</p></section>
+<nav class="guide-pager" aria-label="上一篇與下一篇"><a class="prev" href="../../guide/password/"><span>上一篇</span>替 PDF 加上或拿掉開啟密碼：密碼教學</a><a class="next" href="../../guide/images-and-scan/"><span>下一篇</span>圖片轉 PDF、PDF 轉圖片：圖片與掃描教學</a></nav>
+<aside class="post-cta"><img src="../../assets/icon-192.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><h2>審判工具箱</h2>
+<p>審判工具箱是給律師與法務助理用的 Mac、iPhone 與 iPad App。十三個工具：替卷證加書籤、依陳述人切開筆錄、全文搜尋、轉成 Markdown、做證物冊、去識別化，也能到司法院網站下載判決。卷證只在裝置上處理，不會上傳。</p><div class="stores"><span class="store soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.27-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.67zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg><span>即將在 App Store 推出</span></span></div><p class="small"><a href="../../">看審判工具箱的介紹</a></p></aside>
+<p class="more"><a href="../../guide/">← 所有教學</a></p>
+</div></article></main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot-links">
+<a href="../../iphone/">iPhone 版</a>
+<a href="../../ipad/">iPad 版</a>
+<a href="../../guide/">教學</a>
+<a href="../../blog/">文章</a>
+<a href="../../support/">使用說明</a>
+<a href="../../privacy/">隱私權</a>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">使用者授權合約</a>
+<a href="mailto:sona.orbit.hi@gmail.com">sona.orbit.hi@gmail.com</a>
+</div>
+<p class="copy">© 2026 Sona Orbit</p>
+</div></footer>
+</body>
+</html>

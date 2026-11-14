@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||"").trim().slice(0,60)});}},true);</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>讓掃描的卷證可以搜尋、複製：可搜尋 PDF 教學｜審判工具箱</title>
+<meta name="description" content="用審判工具箱的「可搜尋 PDF」，把掃描頁辨識出的文字用看不見的文字層寫回 PDF。頁面看起來不變，但在 PDF 閱讀程式裡可以搜尋、反白、複製。這篇也說明辨識要多久、辨識錯時會怎樣。">
+<meta name="text-scale" content="scale">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="審判工具箱">
+<meta property="og:title" content="讓掃描的卷證可以搜尋、複製：可搜尋 PDF 教學｜審判工具箱">
+<meta property="og:description" content="用審判工具箱的「可搜尋 PDF」，把掃描頁辨識出的文字用看不見的文字層寫回 PDF。頁面看起來不變，但在 PDF 閱讀程式裡可以搜尋、反白、複製。這篇也說明辨識要多久、辨識錯時會怎樣。">
+<meta property="og:url" content="https://sona-orbit.github.io/trial-toolbox/guide/searchable-pdf/">
+<meta property="og:image" content="https://sona-orbit.github.io/trial-toolbox/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sona-orbit.github.io/trial-toolbox/guide/searchable-pdf/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icon-32.png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&amp;display=swap&amp;text=%20DFPadehino%E3%80%81%E3%83%BB%E4%B8%80%E4%B8%89%E4%B8%8A%E4%B8%8D%E4%B9%85%E4%BA%8B%E4%BA%8C%E4%BB%80%E4%BB%A5%E5%80%8B%E5%80%99%E5%81%9A%E5%85%88%E5%85%A5%E5%85%B7%E5%87%BA%E5%88%A4%E5%88%B0%E5%8D%B7%E5%8F%AF%E5%93%AA%E5%95%8F%E5%97%8E%E5%9C%A8%E5%A4%9A%E5%AD%97%E5%AD%B8%E5%AE%83%E5%AF%A9%E5%B0%8B%E5%B7%A5%E5%B8%B8%E5%B9%BE%E5%BE%8C%E6%80%8E%E6%84%8F%E6%8E%83%E6%8F%8F%E6%90%9C%E6%94%BE%E6%95%99%E6%98%AF%E6%99%82%E6%9C%83%E6%9F%90%E6%AD%A5%E6%B3%A8%E7%82%BA%E7%90%86%E7%9A%84%E7%9C%8B%E7%A2%BA%E7%AC%AC%E7%AE%B1%E8%99%95%E8%A3%BD%E8%A4%87%E8%A6%81%E8%A6%8B%E8%A9%A6%E8%AA%8D%E8%AD%89%E8%AD%98%E8%AE%8A%E8%AE%93%E8%BC%B8%E8%BE%A8%E9%80%99%E9%81%8E%E9%82%84%E9%9C%80%E9%9D%A2%E9%A0%81%E9%A1%8C%E9%BA%BC%EF%BC%8F%EF%BC%9A%EF%BC%9F">
+<link rel="stylesheet" href="../../assets/style.css?v=72cf8515">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/trial-toolbox/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "讓掃描的卷證可以搜尋、複製：可搜尋 PDF 教學", "description": "用審判工具箱的「可搜尋 PDF」，把掃描頁辨識出的文字用看不見的文字層寫回 PDF。頁面看起來不變，但在 PDF 閱讀程式裡可以搜尋、反白、複製。這篇也說明辨識要多久、辨識錯時會怎樣。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://sona-orbit.github.io/trial-toolbox/guide/searchable-pdf/", "author": {"@type": "Person", "name": "Sona Orbit"}, "publisher": {"@type": "Organization", "name": "Sona Orbit"}, "about": {"@type": "SoftwareApplication", "name": "審判工具箱", "url": "https://sona-orbit.github.io/trial-toolbox/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "可搜尋 PDF 要多久？", "acceptedAnswer": {"@type": "Answer", "text": "畫面上的預估以每頁約 4 秒計算，實際時間依電腦而不同。處理中可以按「停止」，已完成的檔案會留下。"}}, {"@type": "Question", "name": "處理後頁面會變嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。原頁的內容原樣保留，只是多疊一層看不見的文字，所以可以搜尋、反白、複製。原本的 PDF 也不會被改動。"}}, {"@type": "Question", "name": "為什麼處理過還是搜尋不到某個字？", "acceptedAnswer": {"@type": "Answer", "text": "多半是那個字被辨識錯了。寫進文字層的是辨識結果，讀錯的字搜尋不到。直書、很小的字、手寫與印章也認不全。"}}]}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="../../"><img src="../../assets/icon-192.webp" alt="" width="32" height="32"><span>審判工具箱</span></a>
+<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../guide/" class="nav-guide" aria-current="page">教學</a><a href="../../blog/" class="nav-blog">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
+</div></header>
+<main><article class="post"><div class="wrap narrow">
+<p class="eyebrow"><a href="../../guide/">教學</a></p>
+<h1>讓掃描的卷證可以搜尋、複製：可搜尋 PDF 教學</h1>
+<p class="post-meta"><time datetime="2026-11-14">2026.11.14</time>・約 5 分鐘</p>
+<p class="lead">閱卷拿到的掃描卷，在 PDF 閱讀程式裡搜尋不到任何字，因為每一頁其實是一張圖片。「可搜尋 PDF」在這台裝置上辨識每一張掃描頁的文字，再把文字疊回原頁，存成一份新的 PDF。</p>
+
+
+<nav class="post-toc" aria-label="目錄"><b>目錄</b><ol><li><a href="#what">這個工具做什麼</a></li><li><a href="#when">什麼時候需要它</a></li><li><a href="#step1">第一步：放入 PDF</a></li><li><a href="#step2">第二步：看哪幾頁是掃描、先試辨識一頁</a></li><li><a href="#step3">第三步：輸出</a></li><li><a href="#check">輸出後怎麼確認</a></li><li><a href="#iphone">在 iPhone・iPad 上</a></li><li><a href="#limits">做不到的事／要注意</a></li></ol></nav>
+<div class="post-body">
+<h2 id="what">這個工具做什麼</h2>
+<p>「可搜尋 PDF」在首頁的「讀卷」那一組（Mac 也可以按 ⌘7）。它做的事：</p>
+<ol>
+<li>檢查每一頁有沒有文字。只有圖片、沒有文字的頁，當成掃描頁。</li>
+<li>用 Apple 系統內建的文字辨識，在這台裝置上辨識掃描頁的文字。卷證不會上傳。</li>
+<li>把辨識出的文字用看不見的文字層疊在原圖上，另存一份 PDF。頁面看起來跟原本一樣，但可以搜尋、反白、複製。</li>
+</ol>
+<p>原本的 PDF 不會被改動。已經有文字的頁和空白頁不處理。</p>
+<p>示範用的是合成卷「偵卷.pdf」每頁轉成圖片做成的「偵卷_掃描.pdf」（5 頁都是掃描），以及本來就有文字的「院卷.pdf」。</p>
+
+<h2 id="when">什麼時候需要它</h2>
+<p>審判工具箱的書籤形成、供述切割、全文搜尋、PDF 轉 Markdown 等工具，遇到掃描頁時會自己先辨識文字，不需要先用這個工具。</p>
+<p>這個工具是給「PDF 本身」用的：處理過的 PDF 用預覽程式、Acrobat 或其他 PDF 閱讀程式打開，也能搜尋、反白、複製文字；交給別人或其他軟體時，對方拿到的也是可以搜尋的檔案。</p>
+
+<h2 id="step1">第一步：放入 PDF</h2>
+<p>點「可搜尋 PDF」，把 PDF 拖進虛線框，或按「選擇檔案…」。可以一次放好幾份，每份各自輸出。</p>
+<figure class="shot"><div class="shot-card" style="max-width:900px"><img src="../../assets/guide/searchable-pdf/intake.webp" alt="可搜尋 PDF 放入兩份：偵卷_掃描.pdf 5 頁、院卷.pdf 3 頁，會得到每份一個可以搜尋的 PDF" width="900" height="320" loading="lazy" decoding="async"></div><figcaption>▲ 放入掃描的偵卷與有文字的院卷。</figcaption></figure>
+<p>有開啟密碼的 PDF，放進來時會問密碼。放好後按右上角的「下一步：設定與預覽」。</p>
+
+<h2 id="step2">第二步：看哪幾頁是掃描、先試辨識一頁</h2>
+<p>左邊是每一份的檢查結果：「5 頁，其中 5 頁是掃描・約 20 秒」，右側標著「5 頁掃描」。整份都有文字的寫「3 頁都有文字，不用處理」，這一份不會輸出。下面是全部合計的掃描頁數與預估時間。</p>
+<figure class="shot"><div class="shot-card" style="max-width:370px"><img src="../../assets/guide/searchable-pdf/list.webp" alt="偵卷_掃描.pdf 5 頁，其中 5 頁是掃描、約 20 秒；院卷.pdf 3 頁都有文字，不用處理；全部合計 5 頁掃描，約 20 秒" width="370" height="155" loading="lazy" decoding="async"></div><figcaption>▲ 院卷本來就有文字，不用處理。</figcaption></figure>
+<p>右邊預覽目前這一份的一頁。App 會先跳到第一張掃描頁，辨識那一頁，在頁面上用紅框標出辨識出的每一行，旁邊列出辨識出的文字與行數。</p>
+<figure class="shot"><div class="shot-card" style="max-width:640px"><img src="../../assets/guide/searchable-pdf/preview.webp" alt="預覽偵卷_掃描.pdf 第 2 頁（掃描頁）：頁面上每一行用紅框標出，右邊是辨識出的 9 行文字" width="640" height="725" loading="lazy" decoding="async"></div><figcaption>▲ 第 2 頁的調查筆錄。紅框是辨識出的每一行，輸出後這些字會疊在原圖上。</figcaption></figure>
+<ul>
+<li>用右上角的箭頭換頁，或點「跳到掃描頁」選一頁。頁面上方標著「掃描頁」或「已有文字，不處理」。</li>
+<li>點左邊另一份，右邊換成那一份。</li>
+<li>閒置一陣子後第一次辨識，會顯示「辨識中…第一次辨識可能要十幾秒（系統在載入文字辨識）。」</li>
+</ul>
+<p>這一步的重點是看辨識的品質：紅框有沒有對在字上、右邊的文字錯字多不多。示範這頁是乾淨的電腦字，幾乎都對，只有「3月1日」中間多了一個空白；用 PDF 閱讀程式搜尋「3月1日」時，可能因此找不到。實際的掃描卷字小、淡、歪斜或有雜點時，錯字會多很多。</p>
+<p>確認後按「下一步：輸出」。所有放入的檔案都已經有文字時，按鈕不能按，旁邊寫「這幾份都已經有文字層，不用處理」。</p>
+
+<h2 id="step3">第三步：輸出</h2>
+<p>左邊寫著要辨識幾頁、預估時間，右邊列出會產生的檔案，只有含掃描頁的那幾份。檔名是原檔名加「_可搜尋」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:995px"><img src="../../assets/guide/searchable-pdf/output.webp" alt="輸出設定的預估時間：約 20 秒（約每頁 4 秒），處理中可以按停止；右邊只會產生 1 個檔案：偵卷_掃描_可搜尋.pdf" width="995" height="375" loading="lazy" decoding="async"></div><figcaption>▲ 5 頁掃描，預估約 20 秒。院卷不在清單裡。</figcaption></figure>
+<ul>
+<li>預估時間以每頁約 4 秒計算，實際時間依電腦而不同，可能比預估快。同一頁如果剛才在書籤形成、PDF 轉 Markdown 等工具辨識過，會直接沿用。</li>
+<li>按「開始輸出 N 個檔案」後，畫面顯示「處理中」與百分比。卷很大時可以按「停止」，已經完成的檔案會留在輸出資料夾，做到一半的那一份不會留下。</li>
+</ul>
+<figure class="shot"><div class="shot-card" style="max-width:665px"><img src="../../assets/guide/searchable-pdf/done.webp" alt="輸出完成：產生了 1 個檔案，1 份 PDF" width="665" height="72" loading="lazy" decoding="async"></div><figcaption>▲ 產生 1 份 PDF。</figcaption></figure>
+<p>點開「詳細記錄」，會寫出每一份有幾頁寫入文字層、幾頁辨識不出字。檔案存在「下載項目 › 審判工具箱」底下新開的資料夾，也可以在輸出前用「存到 › 選擇…」換位置。</p>
+
+<h2 id="check">輸出後怎麼確認</h2>
+<p>用 PDF 閱讀程式打開輸出的檔案，搜尋一個這份卷裡一定有的詞（例如被告的姓名或案號），看找不找得到、反白的位置對不對。找不到的話，多半是那個詞被辨識錯了；可以回到第二步，翻到那一頁看辨識出的文字。</p>
+
+<h2 id="iphone">在 iPhone・iPad 上</h2>
+<p>步驟相同。在 iPhone 上，檔案清單、頁面預覽與辨識出的文字由上往下排，「下一步」等按鈕在畫面下方，輸出的檔案在「檔案」App 的「我的 iPhone › 審判工具箱」。iPhone・iPad 上也可以用相機掃描紙本，再用這個工具處理。細節在<a href="../../guide/iphone-ipad/">在 iPhone・iPad 上使用</a>那篇。</p>
+
+<h2 id="limits">做不到的事／要注意</h2>
+<ul>
+<li><b>辨識錯的字搜不到。</b>寫進去的是辨識出的文字，讀錯的字就以讀錯的樣子存在，搜尋原本的寫法找不到。</li>
+<li><b>只處理橫書。</b>直書的文字、很小的表格字、手寫、印章認不全。</li>
+<li>反白的位置是每一行縮放對齊的；同一行字距不平均時，中間的字反白會偏幾點。</li>
+<li>已經有文字的頁不會重新辨識。原檔的文字層本身有錯（例如轉檔時亂碼），這個工具不會修正。</li>
+<li>辨識很花時間，卷大時請預留時間；可以停止，再分批處理。</li>
+<li>原檔有開啟密碼時，輸出的檔案沒有密碼。需要的話，用<a href="../../guide/password/">密碼</a>工具再加上。</li>
+</ul>
+<p>要在幾卷裡一起找關鍵字、直接跳到那一頁，用<a href="../../guide/full-text-search/">全文搜尋</a>，不必先轉成可搜尋 PDF。要把文字取出來另存，用<a href="../../guide/pdf-to-markdown/">PDF 轉 Markdown</a>。簡短的步驟在<a href="../../support/#tool-searchable">使用說明</a>。</p>
+</div>
+<section class="post-faq"><h2 id="faq">常見問題</h2><h3>可搜尋 PDF 要多久？</h3><p>畫面上的預估以每頁約 4 秒計算，實際時間依電腦而不同。處理中可以按「停止」，已完成的檔案會留下。</p><h3>處理後頁面會變嗎？</h3><p>不會。原頁的內容原樣保留，只是多疊一層看不見的文字，所以可以搜尋、反白、複製。原本的 PDF 也不會被改動。</p><h3>為什麼處理過還是搜尋不到某個字？</h3><p>多半是那個字被辨識錯了。寫進文字層的是辨識結果，讀錯的字搜尋不到。直書、很小的字、手寫與印章也認不全。</p></section>
+<nav class="guide-pager" aria-label="上一篇與下一篇"><a class="prev" href="../../guide/chapter-split/"><span>上一篇</span>照章節標題把一份 PDF 切開：章節切割教學</a><a class="next" href="../../guide/judgment-download/"><span>下一篇</span>到司法院網站找判決並批次下載：判決下載教學</a></nav>
+<aside class="post-cta"><img src="../../assets/icon-192.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><h2>審判工具箱</h2>
+<p>審判工具箱是給律師與法務助理用的 Mac、iPhone 與 iPad App。十三個工具：替卷證加書籤、依陳述人切開筆錄、全文搜尋、轉成 Markdown、做證物冊、去識別化，也能到司法院網站下載判決。卷證只在裝置上處理，不會上傳。</p><div class="stores"><span class="store soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.27-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.67zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg><span>即將在 App Store 推出</span></span></div><p class="small"><a href="../../">看審判工具箱的介紹</a></p></aside>
+<p class="more"><a href="../../guide/">← 所有教學</a></p>
+</div></article></main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot-links">
+<a href="../../iphone/">iPhone 版</a>
+<a href="../../ipad/">iPad 版</a>
+<a href="../../guide/">教學</a>
+<a href="../../blog/">文章</a>
+<a href="../../support/">使用說明</a>
+<a href="../../privacy/">隱私權</a>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">使用者授權合約</a>
+<a href="mailto:sona.orbit.hi@gmail.com">sona.orbit.hi@gmail.com</a>
+</div>
+<p class="copy">© 2026 Sona Orbit</p>
+</div></footer>
+</body>
+</html>
