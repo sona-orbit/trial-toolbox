@@ -282,3 +282,4 @@ details.faq { border-bottom: 1px solid var(--line); padding: 4px 0; }
 .guide-pager a span { color: var(--ink-2); font-size: .85rem; }
 .guide-pager .next { text-align: right; }
 @media (max-width: 26em) { .site-header .nav-guide { display: none; } .guide-pager { grid-template-columns: 1fr; } .guide-pager .next { text-align: left; } }
+.post h2 .group-note { display: block; margin-top: 6px; font-family: var(--sans); font-size: .9rem; font-weight: 400; color: var(--ink-2); }

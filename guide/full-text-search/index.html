@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||"").trim().slice(0,60)});}},true);</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>幾卷一起找關鍵字：全文搜尋教學｜審判工具箱</title>
+<meta name="description" content="用審判工具箱的「全文搜尋」，把幾卷卷證放在一起找關鍵字，看每一處在哪一卷第幾頁，點一筆就顯示那一頁。這篇說明放入、建立搜尋資料、幾個詞一起找、看命中的頁面，以及搜尋資料存在哪裡、怎麼清除。">
+<meta name="text-scale" content="scale">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="審判工具箱">
+<meta property="og:title" content="幾卷一起找關鍵字：全文搜尋教學｜審判工具箱">
+<meta property="og:description" content="用審判工具箱的「全文搜尋」，把幾卷卷證放在一起找關鍵字，看每一處在哪一卷第幾頁，點一筆就顯示那一頁。這篇說明放入、建立搜尋資料、幾個詞一起找、看命中的頁面，以及搜尋資料存在哪裡、怎麼清除。">
+<meta property="og:url" content="https://sona-orbit.github.io/trial-toolbox/guide/full-text-search/">
+<meta property="og:image" content="https://sona-orbit.github.io/trial-toolbox/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sona-orbit.github.io/trial-toolbox/guide/full-text-search/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icon-32.png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&amp;display=swap&amp;text=%20Padehino%E3%80%81%E3%83%BB%E4%B8%80%E4%B8%8A%E4%B8%8D%E4%B8%AD%E4%BA%8B%E4%BB%80%E5%80%8B%E5%81%9A%E5%85%A5%E5%85%A8%E5%85%B7%E5%88%A4%E5%88%B0%E5%8D%B7%E5%91%BD%E5%93%AA%E5%95%8F%E5%97%8E%E5%9C%A8%E5%AD%97%E5%AD%98%E5%AD%B8%E5%AF%A9%E5%B0%8B%E5%B7%A5%E5%B8%B8%E5%B9%BE%E5%BB%BA%E5%BE%97%E6%80%8E%E6%84%8F%E6%89%BE%E6%8E%83%E6%8F%8F%E6%90%9C%E6%94%BE%E6%95%99%E6%96%87%E6%96%99%E6%AD%A5%E6%B3%A8%E6%B8%85%E7%9A%84%E7%9C%8B%E7%AB%8B%E7%AC%AC%E7%AE%B1%E8%A3%A1%E8%A6%81%E8%A6%8B%E8%A9%9E%E8%AD%89%E8%B3%87%E8%B5%B7%E8%BC%B8%E9%80%99%E9%82%A3%E9%8D%B5%E9%97%9C%E9%99%A4%E9%A0%81%E9%A1%8C%E9%BA%BC%EF%BC%8F%EF%BC%9A%EF%BC%9F">
+<link rel="stylesheet" href="../../assets/style.css?v=72cf8515">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/trial-toolbox/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "幾卷一起找關鍵字：全文搜尋教學", "description": "用審判工具箱的「全文搜尋」，把幾卷卷證放在一起找關鍵字，看每一處在哪一卷第幾頁，點一筆就顯示那一頁。這篇說明放入、建立搜尋資料、幾個詞一起找、看命中的頁面，以及搜尋資料存在哪裡、怎麼清除。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://sona-orbit.github.io/trial-toolbox/guide/full-text-search/", "author": {"@type": "Person", "name": "Sona Orbit"}, "publisher": {"@type": "Organization", "name": "Sona Orbit"}, "about": {"@type": "SoftwareApplication", "name": "審判工具箱", "url": "https://sona-orbit.github.io/trial-toolbox/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "全文搜尋的資料存在哪裡？", "acceptedAnswer": {"@type": "Answer", "text": "存在這台裝置上 App 自己的資料夾，內容等同卷證的文字，不會上傳。可以在 App 的「關於」查看大小並清除；清除不會刪掉卷證 PDF。"}}, {"@type": "Question", "name": "掃描的卷證搜得到嗎？", "acceptedAnswer": {"@type": "Answer", "text": "搜得到。放進來時會先辨識文字再建立搜尋資料。辨識錯的字找不到，掃描品質差的頁面請換個寫法再試。"}}, {"@type": "Question", "name": "幾個詞要怎麼一起找？", "acceptedAnswer": {"@type": "Answer", "text": "用空白隔開，例如「王小明 提款卡」。同一頁每個詞都出現才會列出。"}}]}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="../../"><img src="../../assets/icon-192.webp" alt="" width="32" height="32"><span>審判工具箱</span></a>
+<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../guide/" class="nav-guide" aria-current="page">教學</a><a href="../../blog/" class="nav-blog">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
+</div></header>
+<main><article class="post"><div class="wrap narrow">
+<p class="eyebrow"><a href="../../guide/">教學</a></p>
+<h1>幾卷一起找關鍵字：全文搜尋教學</h1>
+<p class="post-meta"><time datetime="2026-11-14">2026.11.14</time>・約 4 分鐘</p>
+<p class="lead">要確認某個名字或某個詞出現在卷裡的哪幾頁，PDF 閱讀程式一次只能搜一份，掃描頁也搜不到。「全文搜尋」把幾卷放在一起，掃描頁先辨識文字，台與臺、全形與半形、斷成兩行的詞都找得到。這個工具不產生檔案。</p>
+
+
+<nav class="post-toc" aria-label="目錄"><b>目錄</b><ol><li><a href="#what">這個工具做什麼</a></li><li><a href="#step1">第一步：放入要搜尋的卷</a></li><li><a href="#build">建立搜尋資料</a></li><li><a href="#search">輸入關鍵字</a></li><li><a href="#page">看命中的那一頁</a></li><li><a href="#data">搜尋資料存在哪裡、怎麼清除</a></li><li><a href="#iphone">在 iPhone・iPad 上</a></li><li><a href="#limits">做不到的事／要注意</a></li></ol></nav>
+<div class="post-body">
+<h2 id="what">這個工具做什麼</h2>
+<p>「全文搜尋」在首頁的「讀卷」那一組。放入一卷或幾卷卷證，輸入關鍵字，列出每一處出現在哪一卷第幾頁，附前後文；點一筆，右邊顯示那一頁，命中的位置框起來。</p>
+<ul>
+<li>台與臺、全形與半形視為相同；被換行斷開的詞也找得到。</li>
+<li>掃描頁會先辨識文字再搜尋。</li>
+<li>不產生任何檔案。搜尋用的資料存在這台裝置上，可以隨時清除。</li>
+</ul>
+<p>這篇用合成的示範卷「偵卷.pdf」「院卷.pdf」說明。放入 PDF 的方法與共通的部分，在<a href="../../guide/getting-started/">第一次使用</a>那篇。</p>
+
+<h2 id="step1">第一步：放入要搜尋的卷</h2>
+<p>從首頁或側邊欄點「全文搜尋」（Mac 也可以按 ⌘4），把 PDF 拖進虛線框，或按「選擇檔案…」。可以一次放好幾卷，一起搜尋。</p>
+<figure class="shot"><div class="shot-card" style="max-width:902px"><img src="../../assets/guide/full-text-search/intake.webp" alt="全文搜尋的第一步：會得到不產生檔案、搜尋資料留在這台 Mac，下面是提示卡與「把卷證 PDF 拖到這裡」" width="902" height="452" loading="lazy" decoding="async"></div><figcaption>▲ 全文搜尋的第一步。上面寫著「不產生檔案」。</figcaption></figure>
+<p>有開啟密碼的卷，放進來時會就地問密碼。這個工具沒有「卷宗簡稱」欄位，結果清單用檔名當卷名（不含 .pdf，太長時只取前 14 個字），例如「偵卷」。之後要加卷，按右上角的「再放一卷」，或把 PDF 拖進視窗。</p>
+
+<h2 id="build">建立搜尋資料</h2>
+<p>放進來後，App 會自動建立搜尋資料，不用按任何按鈕。建立中顯示「正在建立搜尋資料」、百分比與進度條，可以按「停止」；停止後，還沒建好的卷會從清單拿掉。</p>
+<ul>
+<li>有文字的頁很快。掃描頁要先辨識文字，每頁約零點幾秒到幾秒，頁數多時要等一下。</li>
+<li>建好之後，同一卷下次放進來不用再建，直接載入。</li>
+<li>建立失敗時會顯示「搜尋資料沒有建好」與原因，可以按「再試一次」。</li>
+</ul>
+<p>建好之後，右上角寫著「N 卷・N 頁，已建好搜尋資料」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:1021px"><img src="../../assets/guide/full-text-search/ready.webp" alt="搜尋資料建好之後：上方寫著 2 卷・320 頁，已建好搜尋資料，旁邊是「再放一卷」；下面是關鍵字欄與「臺＝台、全形＝半形」「跨行也找」兩個標籤" width="1021" height="165" loading="lazy" decoding="async"></div><figcaption>▲ 兩卷、320 頁，搜尋資料已建好。</figcaption></figure>
+
+<h2 id="search">輸入關鍵字</h2>
+<p>在上面的欄位輸入關鍵字，打字時就會開始找，不用按 Return。左邊上方寫著「找到 N 處，在 N 卷的 N 頁」，下面每一筆是一處，寫著卷名、頁碼與前後文，關鍵字畫紅線。按欄位右邊的清除鍵（圓圈裡的 ×）清掉關鍵字。</p>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">左邊：每一處的前後文</p><img src="../../assets/guide/full-text-search/list.webp" alt="搜尋王小明：找到 8 處，在 2 卷的 7 頁，每筆有卷名、頁碼與前後文，關鍵字畫紅線" width="489" height="570" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">右邊：那一頁</p><img src="../../assets/guide/full-text-search/page.webp" alt="右邊是偵卷第 1 頁，這一頁 2 處，命中的地方用紅框標出，右上角是「在 PDF 打開這一頁」" width="495" height="218" loading="lazy" decoding="async"></div></div><figcaption>▲ 搜尋「王小明」，找到 8 處，在 2 卷的 7 頁。</figcaption></figure>
+<p>要同時找幾個詞，用空白隔開（半形或全形空白都可以）。這時同一頁每個詞都要出現才會列出，兩個詞都會畫線、框起來。</p>
+<figure class="shot"><div class="shot-card" style="max-width:997px"><img src="../../assets/guide/full-text-search/multi.webp" alt="輸入「王小明 提款卡」：找到 10 處，在 1 卷的 3 頁，兩個詞都出現的頁才列出，右邊那一頁兩個詞都框起來" width="997" height="303" loading="lazy" decoding="async"></div><figcaption>▲ 輸入「王小明 提款卡」，只列出兩個詞都出現的 3 頁。</figcaption></figure>
+<p>找不到時顯示「找不到「…」」，下面寫「換個寫法試試；掃描頁辨識錯的字會找不到。」</p>
+<figure class="shot"><div class="shot-card" style="max-width:997px"><img src="../../assets/guide/full-text-search/none.webp" alt="搜尋「機車」沒有結果，顯示找不到「機車」" width="997" height="91" loading="lazy" decoding="async"></div><figcaption>▲ 示範卷裡沒有「機車」。</figcaption></figure>
+<p>一次最多列出 2,000 處。超過時會寫「找到 2,000 處以上」，請加一個詞縮小範圍。</p>
+
+<h2 id="page">看命中的那一頁</h2>
+<p>點左邊的一筆，右邊顯示那一頁，上方寫著卷名與頁碼，旁邊的綠色標籤是「這一頁 N 處」。這一頁所有命中的地方都用紅框標出，點到的那一處框比較粗。第一次出現結果時，上面會有一張提示卡，按「知道了」就收起來。</p>
+<p>要看前後頁或整份，按右上角的「在 PDF 打開這一頁」，會打開整份 PDF 並捲到那一頁，看完按「關閉」。</p>
+<p>注意頁碼是 PDF 的頁碼（第幾頁），不是卷面上印的頁碼。卷面頁碼不同時，請自己換算。</p>
+
+<h2 id="data">搜尋資料存在哪裡、怎麼清除</h2>
+<p>搜尋資料存在這台裝置上 App 自己的資料夾，內容是卷證每一頁的文字，敏感程度等同卷證本身，不會上傳。有開啟密碼的卷，搜尋資料不存，每次放進來都重新建立。</p>
+<p>要查看大小或清除，到側邊欄最下面的「關於」，「資料」區塊有「全文搜尋的搜尋資料」，寫著幾卷、多大、存在哪裡。按「清除」，確認後就刪掉全部的搜尋資料。卷證 PDF 本身不會被刪除；清除後，下次搜尋同一卷會重新建立。</p>
+<figure class="shot"><div class="shot-card" style="max-width:554px"><img src="../../assets/guide/full-text-search/about.webp" alt="「關於」的資料區塊：全文搜尋的搜尋資料，3 卷・3.9 MB，位置與說明，右邊是「清除」" width="554" height="146" loading="lazy" decoding="async"></div><figcaption>▲ 「關於」裡的搜尋資料與「清除」。</figcaption></figure>
+
+<h2 id="iphone">在 iPhone・iPad 上</h2>
+<p>步驟相同。在 iPhone 上，結果列在搜尋欄下面，點一筆會整頁顯示那一頁，找到的字用紅框標出；那一頁下方有「在 PDF 打開這一頁」。「再放一卷」在畫面下方。打字時鍵盤不會遮住搜尋欄，結果清單縮在鍵盤上面。這個工具不產生檔案，所以沒有輸出步驟，也沒有讀秒廣告。iPhone・iPad 版的畫面在<a href="../../iphone/">iPhone・iPad 介紹頁</a>。</p>
+
+<h2 id="limits">做不到的事／要注意</h2>
+<ul>
+<li>掃描頁靠文字辨識，辨識錯的字找不到。重要的詞，可以換個寫法或只搜其中兩三個字再試。</li>
+<li>只比對字面。同音字、不同寫法的名字不會當成同一個詞：示範卷院卷第 2 頁寫的是「王曉明」，搜「王小明」不會列出那一頁。</li>
+<li>不能用 AND／OR、萬用字元或正規表示式；空白隔開的幾個詞一律是「同一頁都要有」。</li>
+<li>不產生檔案，也不會在原本的 PDF 裡加上標記。想讓掃描檔在其他程式裡也能搜尋，用「可搜尋 PDF」。</li>
+</ul>
+<p>下一篇：<a href="../../guide/pdf-to-markdown/">把卷證轉成文字檔：PDF 轉 Markdown 教學</a>。上一篇是<a href="../../guide/testimony-split/">供述切割</a>。簡短的步驟在<a href="../../support/#tool-search">使用說明</a>。</p>
+</div>
+<section class="post-faq"><h2 id="faq">常見問題</h2><h3>全文搜尋的資料存在哪裡？</h3><p>存在這台裝置上 App 自己的資料夾，內容等同卷證的文字，不會上傳。可以在 App 的「關於」查看大小並清除；清除不會刪掉卷證 PDF。</p><h3>掃描的卷證搜得到嗎？</h3><p>搜得到。放進來時會先辨識文字再建立搜尋資料。辨識錯的字找不到，掃描品質差的頁面請換個寫法再試。</p><h3>幾個詞要怎麼一起找？</h3><p>用空白隔開，例如「王小明 提款卡」。同一頁每個詞都出現才會列出。</p></section>
+<nav class="guide-pager" aria-label="上一篇與下一篇"><a class="prev" href="../../guide/testimony-split/"><span>上一篇</span>依陳述人分開筆錄：供述切割教學</a><a class="next" href="../../guide/pdf-to-markdown/"><span>下一篇</span>把卷證轉成文字檔：PDF 轉 Markdown 教學</a></nav>
+<aside class="post-cta"><img src="../../assets/icon-192.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><h2>審判工具箱</h2>
+<p>審判工具箱是給律師與法務助理用的 Mac、iPhone 與 iPad App。十三個工具：替卷證加書籤、依陳述人切開筆錄、全文搜尋、轉成 Markdown、做證物冊、去識別化，也能到司法院網站下載判決。卷證只在裝置上處理，不會上傳。</p><div class="stores"><span class="store soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.27-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.67zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg><span>即將在 App Store 推出</span></span></div><p class="small"><a href="../../">看審判工具箱的介紹</a></p></aside>
+<p class="more"><a href="../../guide/">← 所有教學</a></p>
+</div></article></main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot-links">
+<a href="../../iphone/">iPhone 版</a>
+<a href="../../ipad/">iPad 版</a>
+<a href="../../guide/">教學</a>
+<a href="../../blog/">文章</a>
+<a href="../../support/">使用說明</a>
+<a href="../../privacy/">隱私權</a>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">使用者授權合約</a>
+<a href="mailto:sona.orbit.hi@gmail.com">sona.orbit.hi@gmail.com</a>
+</div>
+<p class="copy">© 2026 Sona Orbit</p>
+</div></footer>
+</body>
+</html>

@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&amp;display=swap&amp;text=%20AIPadehino%E3%80%81%E3%80%8C%E3%80%8D%E4%B8%80%E4%B8%89%E4%B8%8A%E4%B9%8B%E4%B9%9F%E4%BA%8B%E4%BA%8C%E4%BA%A4%E4%BB%A3%E4%BB%A5%E4%BB%B6%E4%BD%A0%E4%BE%86%E5%80%8B%E5%81%9A%E5%82%B3%E5%85%88%E5%85%B7%E5%86%8D%E5%87%BA%E5%88%A4%E5%88%A5%E5%88%B0%E5%89%8D%E5%8C%96%E5%8D%B7%E5%8E%9F%E5%8E%BB%E5%8F%AF%E5%93%AA%E5%95%8F%E5%97%8E%E5%9B%9E%E5%A4%A9%E5%A7%93%E5%AF%A9%E5%B0%8D%E5%B0%B1%E5%B7%A5%E5%B8%B8%E5%BE%8C%E5%BF%83%E6%83%B3%E6%88%90%E6%88%96%E6%8A%8A%E6%8F%9B%E6%94%BE%E6%95%B4%E6%96%87%E6%9C%80%E6%9C%83%E6%9C%89%E6%9D%B1%E6%A0%B8%E6%A5%9A%E6%AD%A5%E6%B8%85%E7%90%86%E7%94%A8%E7%95%99%E7%9A%84%E7%AA%97%E7%AB%AF%E7%AC%AC%E7%AE%B1%E7%B5%A6%E8%81%8A%E8%83%BD%E8%88%AC%E8%94%BD%E8%99%9F%E8%A3%A1%E8%A5%BF%E8%A6%81%E8%A6%86%E8%A6%8B%E8%A6%96%E8%AD%89%E8%AD%98%E8%B3%87%E9%81%AE%E9%81%B8%E9%82%84%E9%9B%B2%E9%A1%8C%EF%BC%8C%EF%BC%9A%EF%BC%9F">
-<link rel="stylesheet" href="../../assets/style.css?v=890521e9">
+<link rel="stylesheet" href="../../assets/style.css?v=72cf8515">
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/trial-toolbox/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "卷證要交給 AI 整理之前：先去識別化、再交出去、最後還原", "description": "想請 AI 整理時間軸、比對供述、擬詰問問題，卷證裡的姓名與身分證字號怎麼辦？這篇用審判工具箱示範三個步驟：去識別化換成代號、交給你用的 AI 工具、把 AI 回覆裡的代號換回原文，以及每一步要人工確認的地方。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://sona-orbit.github.io/trial-toolbox/blog/case-files-to-ai-deidentify-restore/", "image": "https://sona-orbit.github.io/trial-toolbox/assets/blog/case-files-to-ai-deidentify-restore/hero.jpg", "author": {"@type": "Person", "name": "Sona Orbit"}, "publisher": {"@type": "Organization", "name": "Sona Orbit"}, "about": {"@type": "SoftwareApplication", "name": "審判工具箱", "url": "https://sona-orbit.github.io/trial-toolbox/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "審判工具箱會把卷證傳給 AI 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。審判工具箱不呼叫任何 AI，也不上傳檔案。「交給 AI」只把一段指示放進剪貼簿，並在輸出資料夾寫一份說明檔；要貼到哪個 AI 工具、交出哪些檔案，由你決定。"}}, {"@type": "Question", "name": "去識別化之後，就可以放心交給雲端 AI 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不一定。去識別化用規則找個資，沒有稱謂的人名、文字辨識讀錯的字、圖片裡的個資都可能漏，輸出後請自己再看一次。能不能把卷證交給雲端服務，也要依保密義務與當事人的約定自行判斷。"}}, {"@type": "Question", "name": "用一般的 AI 聊天視窗也可以嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。先把輸出資料夾裡的 Markdown 檔拖進對話，再貼上複製的指示。能讀電腦上資料夾的 AI 工具可以直接貼指示。"}}, {"@type": "Question", "name": "選「留姓」或「遮蔽」的，可以還原嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不行。只有用「代號」（姓名A）替換、而且存了對照表的，才能在「還原」分頁換回原文。"}}, {"@type": "Question", "name": "iPhone 或 iPad 上有「交給 AI」嗎？", "acceptedAnswer": {"@type": "Answer", "text": "沒有，這是 Mac 版的功能。iPhone 與 iPad 版有去識別化與還原。"}}]}</script>
@@ -33,7 +33,7 @@
 <body>
 <header class="site-header"><div class="wrap bar">
 <a class="brand" href="../../"><img src="../../assets/icon-192.webp" alt="" width="32" height="32"><span>審判工具箱</span></a>
-<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../blog/" class="nav-blog" aria-current="page">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
+<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../guide/" class="nav-guide">教學</a><a href="../../blog/" class="nav-blog" aria-current="page">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
 </div></header>
 <main><article class="post"><div class="wrap narrow">
 <p class="eyebrow"><a href="../../blog/">文章</a></p>
@@ -101,7 +101,7 @@
 <div class="foot-links">
 <a href="../../iphone/">iPhone 版</a>
 <a href="../../ipad/">iPad 版</a>
-
+<a href="../../guide/">教學</a>
 <a href="../../blog/">文章</a>
 <a href="../../support/">使用說明</a>
 <a href="../../privacy/">隱私權</a>

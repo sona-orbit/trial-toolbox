@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||"").trim().slice(0,60)});}},true);</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>請 AI 工具整理輸出的卷證：交給 AI 教學（Mac）｜審判工具箱</title>
+<meta name="description" content="審判工具箱 Mac 版的「交給 AI」，會產生一段指示放進剪貼簿，讓你貼到自己用的 AI 工具，請它整理輸出的檔案。這篇說明怎麼選範圍與任務、個資提醒的意思，以及「去識別化 → 交給 AI → 還原」的做法。">
+<meta name="text-scale" content="scale">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="審判工具箱">
+<meta property="og:title" content="請 AI 工具整理輸出的卷證：交給 AI 教學（Mac）｜審判工具箱">
+<meta property="og:description" content="審判工具箱 Mac 版的「交給 AI」，會產生一段指示放進剪貼簿，讓你貼到自己用的 AI 工具，請它整理輸出的檔案。這篇說明怎麼選範圍與任務、個資提醒的意思，以及「去識別化 → 交給 AI → 還原」的做法。">
+<meta property="og:url" content="https://sona-orbit.github.io/trial-toolbox/guide/hand-to-ai/">
+<meta property="og:image" content="https://sona-orbit.github.io/trial-toolbox/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sona-orbit.github.io/trial-toolbox/guide/hand-to-ai/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icon-32.png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&amp;display=swap&amp;text=%20.AIMPacdehimno%E2%86%92%E3%80%81%E3%80%8A%E3%80%8B%E3%80%8C%E3%80%8D%E4%B8%80%E4%B8%8A%E4%B8%8D%E4%B9%9F%E4%BA%8B%E4%BA%A4%E4%BB%80%E4%BB%A3%E4%BE%86%E5%80%8B%E5%81%9A%E5%82%B3%E5%85%B7%E5%87%BA%E5%88%A4%E5%88%A5%E5%88%B0%E5%8A%9F%E5%8C%96%E5%8D%B7%E5%8E%9F%E5%8E%BB%E5%95%8F%E5%97%8E%E5%9B%9E%E5%9C%8D%E5%A4%A9%E5%AD%B8%E5%AF%A9%E5%B7%A5%E5%B8%B8%E5%BB%BA%E6%84%8F%E6%88%96%E6%89%93%E6%8A%8A%E6%8C%87%E6%8F%90%E6%8F%9B%E6%95%99%E6%95%B4%E6%98%8E%E6%9C%83%E6%9C%89%E6%B3%95%E6%B3%A8%E7%90%86%E7%94%A8%E7%9A%84%E7%9C%8B%E7%A4%BA%E7%AA%97%E7%AE%B1%E7%AF%84%E7%B5%A6%E8%81%8A%E8%83%BD%E8%88%AC%E8%99%9F%E8%A3%A1%E8%A3%BD%E8%A4%87%E8%A6%81%E8%A6%86%E8%A6%8B%E8%A6%96%E8%AA%AA%E8%AB%8B%E8%AD%89%E8%AD%98%E8%AD%B0%E8%B2%BC%E8%B3%87%E8%BC%B8%E9%80%99%E9%81%8E%E9%81%B8%E9%82%84%E9%86%92%E9%96%8B%E9%A1%8C%E9%BA%BC%EF%BC%88%EF%BC%89%EF%BC%8C%EF%BC%8F%EF%BC%9A%EF%BC%9F">
+<link rel="stylesheet" href="../../assets/style.css?v=72cf8515">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/trial-toolbox/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "請 AI 工具整理輸出的卷證：交給 AI 教學（Mac）", "description": "審判工具箱 Mac 版的「交給 AI」，會產生一段指示放進剪貼簿，讓你貼到自己用的 AI 工具，請它整理輸出的檔案。這篇說明怎麼選範圍與任務、個資提醒的意思，以及「去識別化 → 交給 AI → 還原」的做法。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://sona-orbit.github.io/trial-toolbox/guide/hand-to-ai/", "author": {"@type": "Person", "name": "Sona Orbit"}, "publisher": {"@type": "Organization", "name": "Sona Orbit"}, "about": {"@type": "SoftwareApplication", "name": "審判工具箱", "url": "https://sona-orbit.github.io/trial-toolbox/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "審判工具箱會把卷證傳給 AI 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。「交給 AI」只把一段指示放進剪貼簿，App 本身不呼叫任何 AI、不上傳。要不要貼、貼到哪裡，由你決定。"}}, {"@type": "Question", "name": "iPhone 或 iPad 上有「交給 AI」嗎？", "acceptedAnswer": {"@type": "Answer", "text": "沒有，只有 Mac 版有。"}}, {"@type": "Question", "name": "一般的 AI 聊天視窗也能用嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以，但聊天視窗讀不到電腦上的資料夾。先把輸出資料夾裡的 Markdown 檔拖進對話，再貼上指示。"}}]}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="../../"><img src="../../assets/icon-192.webp" alt="" width="32" height="32"><span>審判工具箱</span></a>
+<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../guide/" class="nav-guide" aria-current="page">教學</a><a href="../../blog/" class="nav-blog">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
+</div></header>
+<main><article class="post"><div class="wrap narrow">
+<p class="eyebrow"><a href="../../guide/">教學</a></p>
+<h1>請 AI 工具整理輸出的卷證：交給 AI 教學（Mac）</h1>
+<p class="post-meta"><time datetime="2026-11-14">2026.11.14</time>・約 6 分鐘</p>
+<p class="lead">用審判工具箱整理好的卷證（書籤、依陳述人分開的筆錄、Markdown 文字），可以再請 AI 工具做時間軸、比對供述這類整理。「交給 AI」不會呼叫任何 AI，它只做一件事：產生一段指示，告訴 AI 檔案在哪、先讀哪份說明、引用要標出處，放進剪貼簿。貼到哪裡、要不要貼，由你決定。</p>
+
+
+<nav class="post-toc" aria-label="目錄"><b>目錄</b><ol><li><a href="#what">這個功能做什麼、不做什麼</a></li><li><a href="#flow">建議的做法：去識別化 → 交給 AI → 還原</a></li><li><a href="#open">打開「交給 AI」</a></li><li><a href="#scope">選範圍</a></li><li><a href="#task">選要請 AI 做什麼</a></li><li><a href="#notice">個資提醒</a></li><li><a href="#copy">看過指示，複製</a></li><li><a href="#paste">貼到 AI 工具</a></li><li><a href="#guide">《給 AI 的說明.md》</a></li><li><a href="#back">把回覆裡的代號換回來</a></li><li><a href="#limits">做不到的事／要注意</a></li></ol></nav>
+<div class="post-body">
+<h2 id="what">這個功能做什麼、不做什麼</h2>
+<p>「交給 AI」只有 Mac 版有，iPhone・iPad 版沒有。它做的事：</p>
+<ul>
+<li>依你選的範圍和任務，產生一段給 AI 的指示，按「複製指示」放進剪貼簿。</li>
+<li>在輸出資料夾寫一份《給 AI 的說明.md》，讓 AI 知道每個檔案是什麼、頁碼怎麼看、要遵守哪些規則。</li>
+<li>檢查範圍裡有沒有含原始個資的檔案，有的話提醒你。</li>
+</ul>
+<p>它不做的事：</p>
+<ul>
+<li><b>不呼叫任何 AI，也不上傳任何東西。</b>審判工具箱本身不連到任何 AI 服務，指示只放進剪貼簿。</li>
+<li>不改任何 AI 工具的設定，也不替你貼上或送出。</li>
+</ul>
+<p>把卷證內容交給雲端的 AI 工具，等於把內容傳出這台電腦。這是你自己的決定；是否符合律師的保密義務、委任人的同意範圍，請自行判斷。</p>
+
+<h2 id="flow">建議的做法：去識別化 → 交給 AI → 還原</h2>
+<ol>
+<li>先用<a href="../deidentify/">去識別化</a>，把姓名、身分證字號等換成「姓名A」這類代號，輸出代號版的文字檔（替換方式選「代號」，並另存對照表）。</li>
+<li>用「交給 AI」，範圍選那一次去識別化的輸出，複製指示貼到 AI 工具。</li>
+<li>AI 的回覆裡有代號時，回到「去識別化 › 還原」，選對照表、貼上回覆，換回原文。</li>
+</ol>
+<p>去識別化用規則找個資，會有漏，代號版裡仍可能留著沒找到的個資。交出去之前請自己看過一次。</p>
+
+<h2 id="open">打開「交給 AI」</h2>
+<p>有四個入口，打開的是同一個畫面：</p>
+<ul>
+<li>首頁四組工具下面的「交給 AI」卡片，按「交給 AI…」。</li>
+<li>側邊欄「關於」上面的「交給 AI」。</li>
+<li>選單列「檔案」最下面的「交給 AI…」。</li>
+<li>每個工具輸出完成的畫面，右上角的「交給 AI…」。從這裡進來時，範圍會先選好剛剛那一次輸出，左上角的返回鍵回到那個工具。</li>
+</ul>
+<figure class="shot"><div class="shot-card" style="max-width:1044px"><img src="../../assets/guide/hand-to-ai/home-card.webp" alt="首頁四組工具下面的「交給 AI」卡片與「交給 AI…」按鈕" width="1044" height="66" loading="lazy" decoding="async"></div><figcaption>▲ 首頁的「交給 AI」卡片。</figcaption></figure>
+<figure class="shot"><div class="shot-card" style="max-width:660px"><img src="../../assets/guide/hand-to-ai/done-button.webp" alt="去識別化輸出完成：產生了 2 個檔案，右邊是「交給 AI…」與「在 Finder 顯示」" width="660" height="69" loading="lazy" decoding="async"></div><figcaption>▲ 輸出完成後，直接把這一次的檔案交給 AI。</figcaption></figure>
+
+<h2 id="scope">選範圍</h2>
+<p>左邊的「範圍」決定 AI 要看哪些檔案。</p>
+<figure class="shot"><div class="shot-card" style="max-width:371px"><img src="../../assets/guide/hand-to-ai/scope.webp" alt="範圍：整個輸出資料夾，或最近的工作裡的某一次（這裡選了「偵卷 去識別化」）" width="371" height="191" loading="lazy" decoding="async"></div><figcaption>▲ 第一列是整個輸出資料夾，下面是最近的工作裡每一次輸出。</figcaption></figure>
+<ul>
+<li><b>整個輸出資料夾</b>：審判工具箱的輸出位置（預設是「下載項目 › 審判工具箱」）。每一次輸出是裡面的一個子資料夾，AI 會看到全部。</li>
+<li><b>某一次輸出</b>：從最近的工作選，例如「偵卷 去識別化」。AI 只看那個子資料夾。最多列出最近 8 次；更早的輸出不在清單裡，要選整個輸出資料夾。</li>
+</ul>
+<p>只想讓 AI 看代號版時，選那一次去識別化的輸出。</p>
+
+<h2 id="task">選要請 AI 做什麼</h2>
+<figure class="shot"><div class="shot-card" style="max-width:371px"><img src="../../assets/guide/hand-to-ai/tasks.webp" alt="想請 AI 做什麼：六個選項，這裡選了「比對同一個人歷次供述的出入」" width="371" height="396" loading="lazy" decoding="async"></div><figcaption>▲ 每個選項下面一行寫著會得到什麼。</figcaption></figure>
+<ul>
+<li><b>整理時間軸</b>：依日期列出每次筆錄與重點，附出處。</li>
+<li><b>比對同一個人歷次供述的出入</b>：列出前後不一致的地方，附出處。</li>
+<li><b>擬交互詰問的問題</b>：依證人分開，每題附卷證出處。</li>
+<li><b>摘要判決並比較</b>：每筆的爭點、法院見解、結果。</li>
+<li><b>整理爭點與證據對照表</b>：每個爭點對應支持與不利的證據。</li>
+<li><b>我自己說</b>：指示只寫範圍與規則，要做什麼你貼上後再說。</li>
+</ul>
+<p>前五個會在指示裡寫好要存的檔名，例如「AI 整理/供述比對.md」。</p>
+
+<h2 id="notice">個資提醒</h2>
+<p>右邊最上面，App 會檢查範圍裡的檔案。檔名是「…_去識別化.md」或「…_去識別化.txt」的算代號版，其他檔案（PDF、切割總覽、對照表等）都算含原始個資。</p>
+<figure class="shot"><div class="shot-card" style="max-width:674px"><img src="../../assets/guide/hand-to-ai/notice-ok.webp" alt="綠色：這個範圍只有代號版，2 個檔案都是去識別化產生的" width="674" height="63" loading="lazy" decoding="async"></div><figcaption>▲ 範圍裡都是代號版時，顯示綠色。</figcaption></figure>
+<figure class="shot"><div class="shot-card" style="max-width:674px"><img src="../../assets/guide/hand-to-ai/notice-warn.webp" alt="黃色：範圍裡有 4 個檔案不是去識別化產生的，旁邊有「先去識別化」" width="674" height="82" loading="lazy" decoding="async"></div><figcaption>▲ 有含原始個資的檔案時，顯示黃色提醒。</figcaption></figure>
+<ul>
+<li>黃色提醒只是提醒，不會擋住操作。</li>
+<li>按「先去識別化」會打開去識別化。範圍是某一次輸出、而且 PDF 不超過 20 份時，那次的 PDF 會一起放進去。</li>
+<li>這個檢查只看檔名，不看內容。代號版裡沒找到的個資，這裡也看不出來。</li>
+</ul>
+
+<h2 id="copy">看過指示，複製</h2>
+<p>中間「給 AI 的指示」是會複製的全文，可以選取、捲動。內容依序是：範圍的完整路徑、先讀哪份說明、要遵守的規則、任務、做好後存到哪裡、回覆的方式。</p>
+<figure class="shot"><div class="shot-card" style="max-width:674px"><img src="../../assets/guide/hand-to-ai/prompt.webp" alt="給 AI 的指示：範圍、先讀的說明檔、規則、任務、存檔位置與回覆方式" width="674" height="351" loading="lazy" decoding="async"></div><figcaption>▲ 範圍選某一次輸出、任務選比對供述時的指示。</figcaption></figure>
+<p>規則包括：只讀不改原本的檔案、新產生的檔案存到「AI 整理」資料夾、引用一定標出處（檔名＋頁碼）、代號照原樣使用、不確定或卷裡沒寫的直接說不確定、只做整理不下法律結論。</p>
+<p>按右上角的「複製指示」（鍵盤 ⇧⌘C），指示就放進剪貼簿，按鈕會暫時變成「已複製」。「在 Finder 顯示資料夾」打開範圍那個資料夾。</p>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">複製之前</p><img src="../../assets/guide/hand-to-ai/copy.webp" alt="右上角的「在 Finder 顯示資料夾」與「複製指示」" width="276" height="38" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">按了以後</p><img src="../../assets/guide/hand-to-ai/copied.webp" alt="按了以後變成綠色的「已複製」" width="264" height="38" loading="lazy" decoding="async"></div></div><figcaption>▲ 複製後幾秒內顯示「已複製」。</figcaption></figure>
+
+<h2 id="paste">貼到 AI 工具</h2>
+<p>畫面下方「接下來」寫了三步。</p>
+<figure class="shot"><div class="shot-card" style="max-width:674px"><img src="../../assets/guide/hand-to-ai/next.webp" alt="接下來的三步，以及「審判工具箱不會呼叫任何 AI，也不會上傳任何東西」" width="674" height="190" loading="lazy" decoding="async"></div><figcaption>▲ 最下面一行：審判工具箱不會呼叫任何 AI，也不會上傳任何東西。</figcaption></figure>
+<ul>
+<li><b>能讀電腦上資料夾的 AI 工具</b>（App 上舉的例子是 Claude 的 Code／Cowork、Codex）：直接貼上指示。第一次它可能會問能不能讀這個資料夾。指示裡寫的是完整路徑，它會照路徑去讀。</li>
+<li><b>一般的聊天視窗</b>：聊天視窗讀不到你電腦上的資料夾。先按「在 Finder 顯示資料夾」，把裡面的 Markdown 檔拖進對話，再貼上指示。</li>
+</ul>
+<p>AI 的整理只是輔助。它可能漏看、讀錯或寫出卷裡沒有的內容；每一點都要對照原卷核對，引用前回到原頁確認。整理結果不是法律意見。</p>
+
+<h2 id="guide">《給 AI 的說明.md》</h2>
+<p>指示會叫 AI 先讀輸出資料夾最上層的《給 AI 的說明.md》。這份說明由 App 寫入，內容是每個工具輸出的檔名規則、頁碼標記的意思、只有 PDF 時怎麼讀，以及上面那些規則。按「在 Finder 顯示說明檔」可以看到它。</p>
+<ul>
+<li>說明檔被刪掉時，下次打開「交給 AI」會補回來。</li>
+<li>你可以自己改內容，改過的 App 不會覆蓋。App 有新版的說明時，另存一份《給 AI 的說明.新版.md》。</li>
+<li>說明裡要求 AI：在範圍裡看到對照表時不要讀它，也不要用它把代號換回原文。</li>
+</ul>
+
+<h2 id="back">把回覆裡的代號換回來</h2>
+<p>AI 的回覆裡有「姓名A」這類代號時，回到「去識別化」，切到「還原」分頁，選去識別化時存的對照表，貼上回覆，右邊就換回原文。步驟與畫面在<a href="../deidentify/#restore">去識別化教學的「還原」</a>。</p>
+<p>AI 把代號改寫成別的樣子（例如「A 先生」）就換不回來。指示裡已經寫了「代號照原樣使用」，回覆仍請自己看一次。</p>
+
+<h2 id="limits">做不到的事／要注意</h2>
+<ul>
+<li>只有 Mac 版有這個功能。iPhone・iPad 版只在「Mac 版介紹」裡提到。</li>
+<li>App 不會替你把檔案傳給 AI，也不會檢查 AI 做得對不對。</li>
+<li>個資提醒只依檔名判斷，不保證代號版裡沒有個資。</li>
+<li>把內容交給雲端 AI 工具是否符合保密義務，請自行判斷。</li>
+<li>AI 整理的內容要對照原卷核對，不能當作法律意見。</li>
+</ul>
+<p>要先把卷證轉成 AI 讀得到的文字，看<a href="../pdf-to-markdown/">PDF 轉 Markdown</a>；個資換成代號，看<a href="../deidentify/">去識別化</a>。</p>
+</div>
+<section class="post-faq"><h2 id="faq">常見問題</h2><h3>審判工具箱會把卷證傳給 AI 嗎？</h3><p>不會。「交給 AI」只把一段指示放進剪貼簿，App 本身不呼叫任何 AI、不上傳。要不要貼、貼到哪裡，由你決定。</p><h3>iPhone 或 iPad 上有「交給 AI」嗎？</h3><p>沒有，只有 Mac 版有。</p><h3>一般的 AI 聊天視窗也能用嗎？</h3><p>可以，但聊天視窗讀不到電腦上的資料夾。先把輸出資料夾裡的 Markdown 檔拖進對話，再貼上指示。</p></section>
+<nav class="guide-pager" aria-label="上一篇與下一篇"><a class="prev" href="../../guide/deidentify/"><span>上一篇</span>把卷證裡的個資換成代號：去識別化教學</a><span></span></nav>
+<aside class="post-cta"><img src="../../assets/icon-192.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><h2>審判工具箱</h2>
+<p>審判工具箱是給律師與法務助理用的 Mac、iPhone 與 iPad App。十三個工具：替卷證加書籤、依陳述人切開筆錄、全文搜尋、轉成 Markdown、做證物冊、去識別化，也能到司法院網站下載判決。卷證只在裝置上處理，不會上傳。</p><div class="stores"><span class="store soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.27-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.67zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg><span>即將在 App Store 推出</span></span></div><p class="small"><a href="../../">看審判工具箱的介紹</a></p></aside>
+<p class="more"><a href="../../guide/">← 所有教學</a></p>
+</div></article></main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot-links">
+<a href="../../iphone/">iPhone 版</a>
+<a href="../../ipad/">iPad 版</a>
+<a href="../../guide/">教學</a>
+<a href="../../blog/">文章</a>
+<a href="../../support/">使用說明</a>
+<a href="../../privacy/">隱私權</a>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">使用者授權合約</a>
+<a href="mailto:sona.orbit.hi@gmail.com">sona.orbit.hi@gmail.com</a>
+</div>
+<p class="copy">© 2026 Sona Orbit</p>
+</div></footer>
+</body>
+</html>

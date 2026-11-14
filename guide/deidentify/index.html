@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||"").trim().slice(0,60)});}},true);</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>把卷證裡的個資換成代號：去識別化教學｜審判工具箱</title>
+<meta name="description" content="用審判工具箱找出卷證裡的姓名、身分證字號、電話、地址等個資，逐項確認後，輸出換成「姓名A」這類代號的文字檔；之後再用「還原」把含代號的文字換回原文。這篇也說明它會漏掉哪些個資。">
+<meta name="text-scale" content="scale">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="審判工具箱">
+<meta property="og:title" content="把卷證裡的個資換成代號：去識別化教學｜審判工具箱">
+<meta property="og:description" content="用審判工具箱找出卷證裡的姓名、身分證字號、電話、地址等個資，逐項確認後，輸出換成「姓名A」這類代號的文字檔；之後再用「還原」把含代號的文字換回原文。這篇也說明它會漏掉哪些個資。">
+<meta property="og:url" content="https://sona-orbit.github.io/trial-toolbox/guide/deidentify/">
+<meta property="og:image" content="https://sona-orbit.github.io/trial-toolbox/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sona-orbit.github.io/trial-toolbox/guide/deidentify/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icon-32.png">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&amp;display=swap&amp;text=%20DFPadehino%E3%80%81%E3%83%BB%E4%B8%80%E4%B8%89%E4%B8%8A%E4%B8%8D%E4%BA%86%E4%BA%8B%E4%BA%8C%E4%BB%80%E4%BB%A3%E4%BD%9C%E5%80%8B%E5%81%9A%E5%85%A5%E5%85%B7%E5%87%BA%E5%88%A4%E5%88%A5%E5%88%B0%E5%8B%95%E5%8C%96%E5%8D%B7%E5%8E%9F%E5%8E%BB%E5%95%8F%E5%97%8E%E5%9B%9E%E5%9C%A8%E5%A1%97%E5%A7%8B%E5%AD%B8%E5%AF%A9%E5%B0%8D%E5%B0%B1%E5%B7%A5%E5%B8%B8%E5%BC%8F%E6%84%8F%E6%88%90%E6%89%BE%E6%8A%8A%E6%8E%89%E6%8E%92%E6%8F%9B%E6%94%BE%E6%95%99%E6%96%87%E6%96%B9%E6%9B%BF%E6%9C%83%E6%9C%89%E6%9F%A5%E6%A0%BC%E6%AA%A2%E6%AD%A5%E6%B2%92%E6%B3%A8%E6%BC%8F%E7%82%BA%E7%85%A7%E7%94%9F%E7%94%A2%E7%94%A8%E7%9A%84%E7%9B%AE%E7%A2%BA%E7%AC%AC%E7%AE%B1%E8%87%AA%E8%88%87%E8%99%9F%E8%A1%A8%E8%A3%9C%E8%A3%A1%E8%A6%81%E8%A6%8B%E8%AA%8D%E8%AD%89%E8%AD%98%E8%B3%87%E8%BC%B8%E9%80%90%E9%80%99%E9%80%9A%E9%81%8E%E9%81%AE%E9%81%B8%E9%82%84%E9%96%8B%E9%99%A4%E9%A0%85%E9%A1%8C%E9%BA%BC%E9%BB%91%EF%BC%8C%EF%BC%8F%EF%BC%9A%EF%BC%9F">
+<link rel="stylesheet" href="../../assets/style.css?v=72cf8515">
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/trial-toolbox/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "把卷證裡的個資換成代號：去識別化教學", "description": "用審判工具箱找出卷證裡的姓名、身分證字號、電話、地址等個資，逐項確認後，輸出換成「姓名A」這類代號的文字檔；之後再用「還原」把含代號的文字換回原文。這篇也說明它會漏掉哪些個資。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://sona-orbit.github.io/trial-toolbox/guide/deidentify/", "author": {"@type": "Person", "name": "Sona Orbit"}, "publisher": {"@type": "Organization", "name": "Sona Orbit"}, "about": {"@type": "SoftwareApplication", "name": "審判工具箱", "url": "https://sona-orbit.github.io/trial-toolbox/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "去識別化會產生塗黑的 PDF 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。輸出的是個資換成代號（或○、███）的文字檔，格式是 Markdown 或純文字。原本的 PDF 不會被改動。"}}, {"@type": "Question", "name": "自動檢查通過，就代表沒有個資了嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不是。自動檢查只確認勾選過的字串沒有留在輸出裡。一開始就沒找到的個資（沒有稱謂的人名、只寫到區的地址、讀錯的字），檢查也找不到，送出前請自己再看一次。"}}, {"@type": "Question", "name": "為什麼還原沒有作用？", "acceptedAnswer": {"@type": "Answer", "text": "還原要用代號模式輸出時另存的對照表。選留姓或遮蔽輸出的，換不回來；AI 工具把代號改寫了的，也換不回來。"}}]}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="../../"><img src="../../assets/icon-192.webp" alt="" width="32" height="32"><span>審判工具箱</span></a>
+<nav class="nav" aria-label="網站導覽"><a href="../../" class="nav-home">首頁</a><a href="../../iphone/" class="nav-iphone">iPhone・iPad</a><a href="../../guide/" class="nav-guide" aria-current="page">教學</a><a href="../../blog/" class="nav-blog">文章</a><a href="../../support/" class="nav-support">使用說明</a><a href="../../privacy/" class="nav-privacy">隱私權</a></nav>
+</div></header>
+<main><article class="post"><div class="wrap narrow">
+<p class="eyebrow"><a href="../../guide/">教學</a></p>
+<h1>把卷證裡的個資換成代號：去識別化教學</h1>
+<p class="post-meta"><time datetime="2026-11-14">2026.11.14</time>・約 8 分鐘</p>
+<p class="lead">要把卷證內容交給別人，或貼到 AI 工具整理之前，常常想先把當事人的個資拿掉。「去識別化」找出卷證裡的個資，讓你逐項確認，再輸出一份個資換成代號的文字檔。它找個資用的是規則和卷證的版式，一定會有漏，所以這篇會把確認的步驟和漏掉的情況寫得比較細。</p>
+
+
+<nav class="post-toc" aria-label="目錄"><b>目錄</b><ol><li><a href="#what">這個工具做什麼、不做什麼</a></li><li><a href="#step1">第一步：放入 PDF，開始找個資</a></li><li><a href="#step2">第二步：逐項確認要遮的項目</a></li><li><a href="#add">漏掉的補上，不要遮的排除</a></li><li><a href="#step3">第三步：選格式與替換方式</a></li><li><a href="#mapping">對照表</a></li><li><a href="#check">輸出與自動檢查</a></li><li><a href="#restore">還原：把代號換回原文</a></li><li><a href="#miss">會漏掉的個資</a></li><li><a href="#iphone">在 iPhone・iPad 上</a></li><li><a href="#limits">做不到的事／要注意</a></li></ol></nav>
+<div class="post-body">
+<h2 id="what">這個工具做什麼、不做什麼</h2>
+<p>「去識別化」在首頁的「遞狀與交付」那一組。它做三件事：</p>
+<ol>
+<li>在卷證裡找姓名、身分證字號、居留證號、電話、電子郵件、地址、出生年月日、銀行帳戶和車牌。</li>
+<li>列成清單讓你逐項確認，勾著的才會換掉。</li>
+<li>輸出一份文字檔，把勾選的個資換成代號，例如「王小明」換成「姓名A」、出生年換成「生日A」。</li>
+</ol>
+<p>先說清楚它不做的事：</p>
+<ul>
+<li><b>輸出的是換成代號的文字（Markdown 或純文字），不是塗黑的 PDF。</b>原本的 PDF 不會被改動，也不會產生遮蔽過的 PDF。</li>
+<li><b>找個資用的是規則與卷證的版式</b>，例如「被告」「受詢問人」後面接著的名字、有固定格式的身分證字號與電話。不是 AI 模型，也不會連網。沒有固定格式的姓名與地址一定會有漏，所以輸出前要逐項確認，輸出後也要再看一次。</li>
+</ul>
+<p>整個過程在這台裝置上處理，卷證不會上傳。</p>
+
+<h2 id="step1">第一步：放入 PDF，開始找個資</h2>
+<p>點「去識別化」，畫面上方有「去識別化」與「還原」兩個分頁，先用「去識別化」。把卷證 PDF 拖進來，或按「選擇檔案…」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:885px"><img src="../../assets/guide/deidentify/intake.webp" alt="去識別化的第一步：上方切換「去識別化」與「還原」，下面放了偵卷與院卷" width="885" height="351" loading="lazy" decoding="async"></div><figcaption>▲ 可以一次放好幾卷，同一個名字在各卷用同一個代號。</figcaption></figure>
+<ul>
+<li>放好後按右上角的「開始找個資」。畫面會顯示「正在找個資」與進度，可以按「停止」。</li>
+<li>掃描頁要先辨識文字，比較久。閒置一陣子後第一次辨識，系統要先載入辨識功能，會多等十幾秒。</li>
+<li>有開啟密碼的 PDF，放進來時會問密碼。</li>
+</ul>
+
+<h2 id="step2">第二步：逐項確認要遮的項目</h2>
+<p>找完會進到「確認要遮的項目」。最上面有一條黃色提醒，每次都會顯示：「輸出的是換成代號後的文字檔（Markdown 或純文字），不是塗黑的 PDF。姓名與地址是用版式和詞表找的，可能有漏，漏掉的可以用「加入要遮的字」補上。」</p>
+<p>左邊是找到的清單，一個名字（或一個號碼）一列。每一列依序是：勾選框、類別、找到的字、出現在哪幾頁幾處、怎麼找到的（規則、版式線索等）。</p>
+<figure class="shot"><div class="shot-card" style="max-width:487px"><img src="../../assets/guide/deidentify/list.webp" alt="找到 6 項、15 處：王小明、李小華、王曉明勾著，張大同與陳大是職務人員，預設不遮" width="487" height="330" loading="lazy" decoding="async"></div><figcaption>▲ 示範卷找到 6 項。職務人員列出來但預設不勾。</figcaption></figure>
+<ul>
+<li><b>勾著的才會換掉。</b>取消勾選就照原樣留著。</li>
+<li>法官、檢察官、書記官、警員這類只以職務身分出現的名字，會列出但預設不勾，標註「職務人員，不遮」。要遮的話自己勾上。</li>
+<li>同一個人不同寫法會當成兩個人。示範卷裡的「王小明」與「王曉明」會分到不同代號；簡稱（王員、王男）和綽號不會自動找到。</li>
+</ul>
+<p>點一列，右邊顯示它出現的那一頁：上半是原頁面，找到的個資用框標出來；下半是這一頁換成代號後的文字，換掉的地方標成紅字。同一個名字出現好幾處時，用右上角的箭頭一處一處看。</p>
+<figure class="shot"><div class="shot-card" style="max-width:487px"><img src="../../assets/shots/redact-review.webp" alt="去識別化的確認畫面：原頁面框出找到的個資，下面是換成代號後的文字" width="487" height="650" loading="lazy" decoding="async"></div><figcaption>▲ 上面框出這一頁找到的個資，下面王小明換成「姓名A」，出生年換成「生日A」。</figcaption></figure>
+<p>下半的文字是這一頁讀到的文字；輸出 Markdown 時另外保留標題與表格，替換的方式相同。</p>
+
+<h2 id="add">漏掉的補上，不要遮的排除</h2>
+<p>清單上方有兩個按鈕：</p>
+<ul>
+<li><b>加入要遮的字</b>：輸入清單裡沒有的字，例如「王員」「阿明」。全卷每個出現的地方都會遮，比對時忽略空白、換行與全形半形。</li>
+<li><b>不遮的名單</b>：一行一個，例如法院、機關名稱或公開的人名。跟名單相同、或整段落在名單字串裡的，不會列出來。</li>
+</ul>
+<p>翻原卷時看到清單沒列的名字、地址，就用「加入要遮的字」補上。確認完，按右上角的「下一步：輸出」，旁邊會寫「共 N 處會換成代號」。</p>
+
+<h2 id="step3">第三步：選格式與替換方式</h2>
+<p>輸出步驟的左邊有「格式」與「替換方式」。</p>
+<figure class="shot"><div class="shot-card" style="max-width:312px"><img src="../../assets/shots/redact-options.webp" alt="去識別化的輸出設定：格式、替換方式、對照表" width="312" height="375" loading="lazy" decoding="async"></div><figcaption>▲ 預設是 Markdown 與代號，對照表預設不存。</figcaption></figure>
+<p><b>格式</b></p>
+<ul>
+<li><b>Markdown</b>：保留標題、表格與頁碼註記（<code>&lt;!-- page N --&gt;</code>），適合貼給 AI 工具。</li>
+<li><b>純文字</b>：逐頁文字，每頁前面一行「──── 第 N 頁 ────」。</li>
+</ul>
+<p><b>替換方式</b></p>
+<ul>
+<li><b>代號（姓名A）</b>：各類別各自編 A、B、C…，同一個人同一個代號，跨卷也一樣。之後可以用對照表「還原」。</li>
+<li><b>留姓（王○○）</b>：姓名留下姓，其他字換成「○」。</li>
+<li><b>遮蔽（███）</b>：一律換成「███」。</li>
+</ul>
+<p>留姓與遮蔽換不回來，不能用「還原」。之後要把 AI 工具的回覆換回真名，請選代號。</p>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">代號＋對照表</p><img src="../../assets/guide/deidentify/opt-mapping.webp" alt="選了代號並勾「另外存一份對照表（JSON）」，下面顯示要存的資料夾「對照表」" width="266" height="293" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">純文字＋留姓</p><img src="../../assets/guide/deidentify/opt-surname.webp" alt="選了純文字與留姓：說明寫著遮蔽符號換不回來，對照表的選項不出現" width="266" height="237" loading="lazy" decoding="async"></div></div><figcaption>▲ 選代號時才有「對照表」；選留姓或遮蔽時，說明改成換不回來。</figcaption></figure>
+
+<h2 id="mapping">對照表</h2>
+<p>選代號時，下面多一個「另外存一份對照表（JSON）」。對照表記著每個代號是誰，「還原」要用它。</p>
+<ul>
+<li><b>對照表本身就含個資，預設不存。</b></li>
+<li>勾了以後要按「選擇…」另選一個資料夾。請選一個跟輸出不同、只有自己看得到的地方；沒選位置前不能輸出。</li>
+<li>對照表不會放進輸出的資料夾。之後把輸出的資料夾整個交給別人或 AI 工具時，對照表不會跟著出去。</li>
+</ul>
+<p>不打算還原的話，可以不存。</p>
+
+<h2 id="check">輸出與自動檢查</h2>
+<p>右邊「按下去會產生這 N 個檔案」列出每卷的檔名、格式和要替換幾處。存了對照表時，清單裡也會列出對照表和它存的位置。</p>
+<figure class="shot"><div class="shot-card" style="max-width:660px"><img src="../../assets/guide/deidentify/plan.webp" alt="按下去會產生 3 個檔案：偵卷_去識別化.md、院卷_去識別化.md，以及存在「對照表」資料夾、不在輸出資料夾的對照表" width="660" height="144" loading="lazy" decoding="async"></div><figcaption>▲ 檔名是原檔名加「_去識別化」。對照表另外存，寫著不在輸出資料夾。</figcaption></figure>
+<p>原檔名裡有個資時（例如「受詢問人王小明.pdf」），檔名裡的也會換成代號。</p>
+<p>按「開始輸出 N 個檔案」。輸出完，App 會自動檢查一次：在輸出的文字與檔名裡，再找一遍勾選要遮的字串。</p>
+<figure class="shot"><div class="shot-card" style="max-width:660px"><img src="../../assets/guide/deidentify/check.webp" alt="自動檢查通過：輸出的文字與檔名裡找不到勾選要遮的字串" width="660" height="111" loading="lazy" decoding="async"></div><figcaption>▲ 檢查通過時是綠色，下面仍提醒姓名與地址可能有漏。</figcaption></figure>
+<ul>
+<li>通過時顯示「自動檢查通過」與檢查了幾個字串。你自己取消勾選的地方照原樣留著，不算漏遮。</li>
+<li>沒通過時顯示「請檢查：有個資可能沒遮到」，列出檔名、頁碼和殘留的字。勾了卻在輸出那一頁找不到的項目也會列出，請打開檔案確認。可以回上一步用「加入要遮的字」補上，再輸出一次。</li>
+<li>自動檢查只找<b>勾選過</b>的字串。清單一開始就沒找到的個資，檢查也找不到。所以通過了，送出前仍請自己再看一次文字檔。</li>
+</ul>
+
+<h2 id="restore">還原：把代號換回原文</h2>
+<p>把代號版交給 AI 工具整理後，回覆裡會是「姓名A」這類代號。切到上方的「還原」分頁，可以換回原文。</p>
+<ol>
+<li><b>選對照表</b>：按「選擇對照表…」，選去識別化時存的 JSON 檔。旁邊會顯示有幾個代號。</li>
+<li><b>貼上含代號的文字</b>：例如 AI 的回覆。</li>
+<li><b>換回原文</b>：右邊馬上顯示換回原文的結果，標出換回幾處。按「拷貝」複製。</li>
+</ol>
+<figure class="shot"><div class="shot-card" style="max-width:992px"><img src="../../assets/guide/deidentify/restore-map.webp" alt="還原的第 1 步：選好的對照表，4 個代號" width="992" height="90" loading="lazy" decoding="async"></div><figcaption>▲ 對照表裡有個資，用完請妥善保管。</figcaption></figure>
+<figure class="shot"><div class="pair"><div class="shot-card"><p class="shot-label">貼上含代號的文字</p><img src="../../assets/shots/restore-in.webp" alt="貼上含代號的文字：姓名A 於生日A生，與姓名B 為同事" width="492" height="90" loading="lazy" decoding="async"></div><div class="shot-card"><p class="shot-label">換回原文</p><img src="../../assets/shots/restore-out.webp" alt="換回原文：王小明 於民國80年生，與李小華 為同事" width="492" height="90" loading="lazy" decoding="async"></div></div><figcaption>▲ 「姓名A」「生日A」「姓名B」換回王小明、民國80年、李小華。</figcaption></figure>
+<ul>
+<li>只有代號可以還原。留姓（王○○）與遮蔽（███）換不回來。</li>
+<li>AI 工具把代號改寫了（例如寫成「A 先生」）就換不回來。交給 AI 時，請它照原樣使用代號。</li>
+<li>同一個人在卷裡有不同寫法（例如辨識讀錯的字）時，還原後都換成對照表裡的那一種寫法。</li>
+</ul>
+
+<h2 id="miss">會漏掉的個資</h2>
+<p>下面這些情況，App 找不到或找不完整，請在確認那一步自己補：</p>
+<ul>
+<li><b>沒有稱謂的人名</b>：附表裡只寫名字的被害人、內文只提一次的關係人、假名。名字前面沒有「被告」「證人」這類稱謂，在別處也沒以稱謂出現，就找不到。</li>
+<li><b>兩個字的名字</b>：跟常見詞一樣的（例如「陳明」）不收。</li>
+<li><b>簡稱與綽號</b>：「王員」「王男」「王姓」、綽號不會自動找到。</li>
+<li><b>格式不完整的地址與號碼</b>：只寫到區（「臺北市大安區」）沒有門牌的地址、國字數字的生日、沒有區碼分隔又沒有欄位名的市話、護照號碼、健保卡號、統一編號都不抓。</li>
+<li><b>文字辨識讀錯的字</b>：掃描頁讀錯的名字只能找到讀錯的那個寫法；手寫、印章、很小的字和密集的表格基本上讀不到。掃描卷的表格，稱謂和名字可能對不起來。</li>
+<li><b>不在頁面文字裡的</b>：註解（便利貼）、表單欄位、文件資訊，以及頁面裡的圖片（例如貼上去的身分證影本）。這些內容也不會出現在輸出的文字裡。</li>
+</ul>
+<p>反過來也會誤判，例如稱謂後面接一般句子、開頭字剛好是姓，或沒有欄位名的車牌格式。誤判的取消勾選即可。</p>
+
+<h2 id="iphone">在 iPhone・iPad 上</h2>
+<p>步驟相同。iPhone 上清單在上、頁面預覽在下，點一列往下看它出現的那一頁；「去識別化」「還原」的切換在標題下面。按鈕在畫面下方，輸出的檔案在「檔案 › 我的 iPhone › 審判工具箱」。細節在 <a href="../../iphone/">iPhone・iPad 版的介紹</a>。</p>
+
+<h2 id="limits">做不到的事／要注意</h2>
+<ul>
+<li>不輸出塗黑的 PDF。要遞給法院或對造的 PDF 需要遮蔽時，請用其他工具處理並自行確認。</li>
+<li>App 列出的清單不是完整的個資清單。是否遮得夠，要由你逐項確認後判斷。</li>
+<li>Markdown 不取出圖片，圖片裡的個資沒辦法處理。</li>
+<li>把代號版交給雲端 AI 工具，仍然是把卷證內容傳出這台電腦；是否符合保密義務，請自行判斷。</li>
+<li>對照表含個資。存在哪裡、用完是否刪除，請自己管理。</li>
+</ul>
+<p>要先把卷證轉成文字看看，用<a href="../pdf-to-markdown/">PDF 轉 Markdown</a>。代號版做好後，交給 AI 工具的做法在<a href="../hand-to-ai/">交給 AI</a>那篇。</p>
+</div>
+<section class="post-faq"><h2 id="faq">常見問題</h2><h3>去識別化會產生塗黑的 PDF 嗎？</h3><p>不會。輸出的是個資換成代號（或○、███）的文字檔，格式是 Markdown 或純文字。原本的 PDF 不會被改動。</p><h3>自動檢查通過，就代表沒有個資了嗎？</h3><p>不是。自動檢查只確認勾選過的字串沒有留在輸出裡。一開始就沒找到的個資（沒有稱謂的人名、只寫到區的地址、讀錯的字），檢查也找不到，送出前請自己再看一次。</p><h3>為什麼還原沒有作用？</h3><p>還原要用代號模式輸出時另存的對照表。選留姓或遮蔽輸出的，換不回來；AI 工具把代號改寫了的，也換不回來。</p></section>
+<nav class="guide-pager" aria-label="上一篇與下一篇"><a class="prev" href="../../guide/pdf-to-markdown/"><span>上一篇</span>把卷證轉成文字檔：PDF 轉 Markdown 教學</a><a class="next" href="../../guide/hand-to-ai/"><span>下一篇</span>請 AI 工具整理輸出的卷證：交給 AI 教學（Mac）</a></nav>
+<aside class="post-cta"><img src="../../assets/icon-192.webp" alt="" width="96" height="96" loading="lazy" decoding="async"><h2>審判工具箱</h2>
+<p>審判工具箱是給律師與法務助理用的 Mac、iPhone 與 iPad App。十三個工具：替卷證加書籤、依陳述人切開筆錄、全文搜尋、轉成 Markdown、做證物冊、去識別化，也能到司法院網站下載判決。卷證只在裝置上處理，不會上傳。</p><div class="stores"><span class="store soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.27-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.67zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg><span>即將在 App Store 推出</span></span></div><p class="small"><a href="../../">看審判工具箱的介紹</a></p></aside>
+<p class="more"><a href="../../guide/">← 所有教學</a></p>
+</div></article></main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot-links">
+<a href="../../iphone/">iPhone 版</a>
+<a href="../../ipad/">iPad 版</a>
+<a href="../../guide/">教學</a>
+<a href="../../blog/">文章</a>
+<a href="../../support/">使用說明</a>
+<a href="../../privacy/">隱私權</a>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">使用者授權合約</a>
+<a href="mailto:sona.orbit.hi@gmail.com">sona.orbit.hi@gmail.com</a>
+</div>
+<p class="copy">© 2026 Sona Orbit</p>
+</div></footer>
+</body>
+</html>
