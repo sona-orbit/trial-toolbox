@@ -6,4 +6,4 @@ Served by GitHub Pages at https://sona-orbit.github.io/trial-toolbox/
 
 - Traditional Chinese only (home, support, privacy, articles)
 - Static HTML/CSS generated elsewhere; no build step on this repository
-- Contact: sona.orbit.hi@gmail.com
+- Published by Sona Orbit. Issues and pull requests are turned off.
